@@ -6,7 +6,7 @@ function PoinInti() {
   const [modalMessage, setModalMessage] = useState('');
 
   // Gunakan Formspree untuk notifikasi via Email
-  const FORMSPREE_ID = "xyeyvvey";
+  // const FORMSPREE_ID = "xyeyvvey";
 
   // Gunakan CallMeBot API untuk mengirim pesan WhatsApp secara diam-diam
   // 1. Tambahkan nomor +34 693 54 27 68 ke kontak HP Anda (misal nama: CallMeBot)
