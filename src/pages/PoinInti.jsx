@@ -58,25 +58,25 @@ function PoinInti() {
 
   return (
     <>
-      <div className="flex flex-col items-center text-center animate-fade-in-up w-full max-w-3xl mx-auto">
+      <div className="flex flex-col items-center text-center animate-fade-in-up w-full max-w-3xl mx-auto px-6">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 pl-2 pr-3 py-2 rounded-full bg-white border border-[#DCDCDC] mb-10 hover:shadow-md transition-shadow cursor-default">
-          <span className="inline-flex items-center justify-center rounded-full bg-[#6C40E5] px-2 py-1 text-center font-['Satoshi'] text-[12px] font-medium leading-normal tracking-[0.24px] text-white shadow-[0_7px_16px_0_rgba(62,24,197,0.20)]">
+        <div className="inline-flex items-center gap-2 pl-2 pr-3 py-2 rounded-full bg-white border border-[#DCDCDC] mb-8 md:mb-10 hover:shadow-md transition-shadow cursor-default mt-8 md:mt-0">
+          <span className="inline-flex items-center justify-center rounded-full bg-[#6C40E5] px-2 py-1 text-center font-['Satoshi'] text-[10px] md:text-[12px] font-medium leading-normal tracking-[0.24px] text-white shadow-[0_7px_16px_0_rgba(62,24,197,0.20)]">
             Baru
           </span>
 
-          <span className="font-['Satoshi'] text-[14px] font-medium leading-[100%] tracking-[-0.28px] text-[#505050]">
+          <span className="font-['Satoshi'] text-[12px] md:text-[14px] font-medium leading-[100%] tracking-[-0.28px] text-[#505050]">
             Versi Terbaik dari Diri Faiz
           </span>
         </div>
 
         {/* Heading */}
-        <h1 className="mb-6 text-center font-['Satoshi'] text-[100px] font-bold leading-[110px] tracking-[-5px] bg-black bg-clip-text text-transparent">
+        <h1 className="mb-4 md:mb-6 text-center font-['Satoshi'] text-5xl sm:text-6xl md:text-[100px] font-bold leading-tight md:leading-[110px] tracking-tight md:tracking-[-5px] bg-black bg-clip-text text-transparent">
           Pilihan di Tangan Kamu
         </h1>
 
         {/* Description */}
-        <p className="mb-14 max-w-2xl text-center font-['Satoshi'] text-[20px] font-medium leading-[145%] tracking-[-0.6px] text-[#6A6A6A]">
+        <p className="mb-10 md:mb-14 max-w-2xl text-center font-['Satoshi'] text-base md:text-[20px] font-medium leading-relaxed md:leading-[145%] tracking-[-0.6px] text-[#6A6A6A]">
           Faiz sudah Evaluasi diri, perbaiki kesalahan, dan siap menjadi tempat bersandar dan tempat pulang yang paling tepat
         </p>
 
@@ -84,7 +84,7 @@ function PoinInti() {
         <div className="flex flex-col sm:flex-row gap-4 w-full justify-center items-center">
           <button
             onClick={() => handleChoice('Mau')}
-            className="w-full sm:w-auto h-[61px] px-8 py-4 rounded-2xl flex justify-center items-center gap-[12.73px] text-white text-center font-medium text-[20px] tracking-[-0.6px] bg-[#6C40E5] shadow-[0_7px_16px_0_rgba(62,24,197,0.20),0_30px_30px_0_rgba(62,24,197,0.17),0_67px_40px_0_rgba(62,24,197,0.10),0_119px_47px_0_rgba(62,24,197,0.03)] hover:-translate-y-1 transition-all duration-300 group"
+            className="w-full sm:w-auto h-[61px] px-6 md:px-8 py-4 rounded-2xl flex justify-center items-center gap-[12.73px] text-white text-center font-medium text-[16px] md:text-[20px] tracking-[-0.6px] bg-[#6C40E5] shadow-[0_7px_16px_0_rgba(62,24,197,0.20),0_30px_30px_0_rgba(62,24,197,0.17),0_67px_40px_0_rgba(62,24,197,0.10),0_119px_47px_0_rgba(62,24,197,0.03)] hover:-translate-y-1 transition-all duration-300 group"
             style={{
               fontFamily: 'Satoshi, sans-serif',
               backgroundImage: 'radial-gradient(44.33% 44.33% at 50.2% 0%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%), #6C40E5'
@@ -96,7 +96,7 @@ function PoinInti() {
 
           <button
             onClick={() => handleChoice('Masih butuh waktu')}
-            className="w-full sm:w-auto h-[61px] px-8 py-4 rounded-2xl flex justify-center items-center gap-[10px] text-black text-center font-medium text-[20px] tracking-[-0.6px] shadow-[0_2px_5px_0_rgba(0,0,0,0.04),0_9px_9px_0_rgba(0,0,0,0.03),0_20px_12px_0_rgba(0,0,0,0.02),0_35px_14px_0_rgba(0,0,0,0.01)] hover:-translate-y-1 transition-all duration-300"
+            className="w-full sm:w-auto h-[61px] px-6 md:px-8 py-4 rounded-2xl flex justify-center items-center gap-[10px] text-black text-center font-medium text-[16px] md:text-[20px] tracking-[-0.6px] shadow-[0_2px_5px_0_rgba(0,0,0,0.04),0_9px_9px_0_rgba(0,0,0,0.03),0_20px_12px_0_rgba(0,0,0,0.02),0_35px_14px_0_rgba(0,0,0,0.01)] hover:-translate-y-1 transition-all duration-300"
             style={{
               fontFamily: 'Satoshi, sans-serif',
               backgroundImage: 'linear-gradient(0deg, #FFF 25.81%, #F0F0F0 125.41%)'

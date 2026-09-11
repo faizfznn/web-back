@@ -13,8 +13,8 @@ function Navbar() {
       <div
         className="
       flex
-      w-[875px]
-      px-[12px] py-[8px]
+      w-full max-w-[875px]
+      px-2 md:px-[12px] py-2 md:py-[8px]
       justify-between
       items-center
       rounded-[20px]
@@ -24,13 +24,13 @@ function Navbar() {
     "
       >
         {/* Logo */}
-        <div className="flex items-center gap-2 cursor-pointer" onClick={() => navigate('/poin-inti')}>
-          <img className='h-[32px]' src={logoFaiz} alt="" />
-          <img className='h-[36px]' src={logoRara} alt="" />
+        <div className="flex items-center gap-1 md:gap-2 cursor-pointer shrink-0" onClick={() => navigate('/poin-inti')}>
+          <img className='h-[24px] md:h-[32px]' src={logoFaiz} alt="" />
+          <img className='h-[28px] md:h-[36px]' src={logoRara} alt="" />
         </div>
 
         {/* Center Nav */}
-        <div className="hidden md:flex items-center gap-1">
+        <div className="flex items-center gap-0.5 md:gap-1">
 
           {/* Point Inti */}
           <button
@@ -47,7 +47,7 @@ function Navbar() {
       flex justify-center items-center
       text-center
       font-['Satoshi']
-      text-[14.408px]
+      text-[12px] md:text-[14.408px]
       not-italic
       font-medium
       leading-normal
@@ -56,14 +56,14 @@ function Navbar() {
 
       ${currentPage === '/poin-inti' || currentPage === '/'
                 ? `
-            px-[16px] py-[8px]
-            gap-[12.732px]
+            px-3 md:px-[16px] py-1.5 md:py-[8px]
+            gap-1 md:gap-[12.732px]
             rounded-[12px]
             text-[#F5F5F5]
             shadow-[0_185px_52px_0_rgba(62,24,197,0),0_119px_47px_0_rgba(62,24,197,0.03),0_67px_40px_0_rgba(62,24,197,0.10),0_30px_30px_0_rgba(62,24,197,0.17),0_7px_16px_0_rgba(62,24,197,0.20)]
           `
                 : `
-            px-[6px] py-[4px]
+            px-2 md:px-[6px] py-1 md:py-[4px]
             gap-[10px]
             text-[#505050]
             hover:text-[#303030]
@@ -89,7 +89,7 @@ function Navbar() {
       flex justify-center items-center
       text-center
       font-['Satoshi']
-      text-[14.408px]
+      text-[12px] md:text-[14.408px]
       not-italic
       font-medium
       leading-normal
@@ -98,14 +98,14 @@ function Navbar() {
 
       ${currentPage === '/memori'
                 ? `
-            px-[16px] py-[8px]
-            gap-[12.732px]
+            px-3 md:px-[16px] py-1.5 md:py-[8px]
+            gap-1 md:gap-[12.732px]
             rounded-[12px]
             text-[#F5F5F5]
             shadow-[0_185px_52px_0_rgba(62,24,197,0),0_119px_47px_0_rgba(62,24,197,0.03),0_67px_40px_0_rgba(62,24,197,0.10),0_30px_30px_0_rgba(62,24,197,0.17),0_7px_16px_0_rgba(62,24,197,0.20)]
           `
                 : `
-            px-[6px] py-[4px]
+            px-2 md:px-[6px] py-1 md:py-[4px]
             gap-[10px]
             text-[#505050]
             hover:text-[#303030]
@@ -129,19 +129,19 @@ function Navbar() {
           className="
     group
     flex
-    px-[16px] py-[12px]
+    px-3 md:px-[16px] py-1.5 md:py-[12px]
     justify-center
     items-center
-    gap-[12.732px]
+    gap-1 md:gap-[12.732px]
     rounded-[12px]
     text-[#F5F5F5]
     text-center
     font-['Satoshi']
-    text-[16px]
+    text-[12px] md:text-[16px]
     not-italic
     font-medium
     leading-normal
-    tracking-[-0.48px]
+    tracking-tight md:tracking-[-0.48px]
     shadow-[0_185px_52px_0_rgba(62,24,197,0),0_119px_47px_0_rgba(62,24,197,0.03),0_67px_40px_0_rgba(62,24,197,0.10),0_30px_30px_0_rgba(62,24,197,0.17),0_7px_16px_0_rgba(62,24,197,0.20)]
     transition-all
     duration-300
