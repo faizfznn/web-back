@@ -1,42 +1,46 @@
-import FOTO_1 from "./foto-1.png";
-import FOTO_2 from "./foto-2.jpeg";
-import FOTO_3 from "./foto-3.JPG";
-import FOTO_4 from "./foto-4.JPG";
-import FOTO_5 from "./foto-5.JPG";
-import FOTO_6 from "./foto-6.JPG";
-import FOTO_7 from "./foto-7.JPG";
-import FOTO_8 from "./foto-8.JPG";
-import FOTO_9 from "./foto-9.JPG";
-import FOTO_10 from "./foto-10.JPG";
-import FOTO_11 from "./foto-11.png";
-import FOTO_12 from "./foto-12.png";
-import FOTO_13 from "./foto-13.jpeg";
-import FOTO_14 from "./foto-14.jpg";
 import VIDEO_1 from "./video-1.mp4";
 import VIDEO_2 from "./video-2.mp4";
+import FOTO_1 from "./foto-1.jpg";
+import FOTO_2 from "./foto-2.jpg";
+import FOTO_3 from "./foto-3.jpg";
+import FOTO_4 from "./foto-4.jpg";
+import FOTO_5 from "./foto-5.jpg";
+import FOTO_6 from "./foto-6.jpg";
+import FOTO_7 from "./foto-7.jpg";
 
 const MEMORI_MEDIA = [
+  { src: FOTO_2, title: "MC Bareng", caption: "Kamu cantik banget sayang" },
   {
     src: VIDEO_2,
     mediaType: "video",
     title: "Video Awal Kamu Mengirim Ke Aku",
     caption: "Memperagakan Emot 💁🏻",
   },
-  { src: FOTO_14, title: "Rara Nakal #1", caption: "Faiz Request Emot Fuck" },
-  { src: FOTO_1, title: "Happy Girlfriend Day", caption: "" },
-  { src: FOTO_2, title: "Senyum bareng terus ya", caption: "✨🌻💛" },
-  { src: FOTO_3, title: "Selalu sama kamu", caption: "🫶🏻🫶🏻🫶🏻" },
-  { src: FOTO_4, title: "Memori #4", caption: "💙💜🤎" },
-  { src: FOTO_5, title: "Memori #5", caption: "✨🤍✨" },
-  { src: FOTO_6, title: "Memori #6", caption: "🌻💛🌻" },
-  { src: FOTO_7, title: "Memori #7", caption: "🫶🏻💖🫶🏻" },
-  { src: FOTO_8, title: "Memori #8", caption: "💙🤍💙" },
-  { src: FOTO_9, title: "Memori #9", caption: "✨💜✨" },
-  { src: FOTO_10, title: "Memori #10", caption: "🤎🖤🤍" },
-  { src: FOTO_11, title: "Memori #11", caption: "💖🌻💖" },
-  { src: FOTO_12, title: "Memori #12", caption: "🫶🏻✨🫶🏻" },
-  { src: FOTO_13, title: "Memori #13", caption: "💛🤍💛" },
-  { src: VIDEO_1, mediaType: "video", title: "Memori video", caption: "🎞️💖" },
+  { src: FOTO_1, title: "Rara Nakal #1", caption: "Faiz Request Emot Fuck" },
+  { src: FOTO_3, title: "Study Date #2", caption: "Gutenham kesayangan rara" },
+  {
+    src: FOTO_7,
+    title: "Pulang Study Date #1",
+    caption: "Aku sangat happy, kamu pinter sekali",
+  },
+  { src: FOTO_4, title: "Wallpaper Akuh", caption: "😘" },
+  {
+    src: FOTO_5,
+    title: "Gelang lego aku dipaakai kamu",
+    caption: "Faiz Happy Sekali",
+  },
+  {
+    src: FOTO_6,
+    title: "Memegang tangan kamu",
+    caption: "Perasaannya getar tegang",
+  },
+
+  {
+    src: VIDEO_1,
+    mediaType: "video",
+    title: "Merayakan Ultah Aku",
+    caption: "Aku di prank",
+  },
 ];
 
 const ROTATION_CLASSES = [
@@ -73,21 +77,6 @@ function getRandomLayout() {
 }
 
 export {
-  FOTO_1,
-  FOTO_2,
-  FOTO_3,
-  FOTO_4,
-  FOTO_5,
-  FOTO_6,
-  FOTO_7,
-  FOTO_8,
-  FOTO_9,
-  FOTO_10,
-  FOTO_11,
-  FOTO_12,
-  FOTO_13,
-  FOTO_14,
-  VIDEO_1,
   MEMORI_MEDIA,
   ROTATION_CLASSES,
   getRandomRotation,

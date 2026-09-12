@@ -1,5 +1,4 @@
-import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from "react-router-dom";
 import logoRara from "../assets/logo-rara.png";
 import logoFaiz from "../assets/logo-faiz.png";
 
@@ -24,23 +23,25 @@ function Navbar() {
     "
       >
         {/* Logo */}
-        <div className="flex items-center gap-1 md:gap-2 cursor-pointer shrink-0" onClick={() => navigate('/poin-inti')}>
-          <img className='h-[24px] md:h-[32px]' src={logoFaiz} alt="" />
-          <img className='h-[28px] md:h-[36px]' src={logoRara} alt="" />
+        <div
+          className="flex items-center gap-1 md:gap-2 cursor-pointer shrink-0"
+          onClick={() => navigate("/poin-inti")}
+        >
+          <img className="h-[24px] md:h-[32px]" src={logoFaiz} alt="" />
+          <img className="h-[28px] md:h-[36px]" src={logoRara} alt="" />
         </div>
 
         {/* Center Nav */}
         <div className="flex items-center gap-0.5 md:gap-1">
-
           {/* Point Inti */}
           <button
-            onClick={() => navigate('/poin-inti')}
+            onClick={() => navigate("/poin-inti")}
             style={
-              currentPage === '/poin-inti' || currentPage === '/'
+              currentPage === "/poin-inti" || currentPage === "/"
                 ? {
-                  background:
-                    'radial-gradient(44.33% 44.33% at 50.2% 0%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%), #6C40E5',
-                }
+                    background:
+                      "radial-gradient(44.33% 44.33% at 50.2% 0%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%), #6C40E5",
+                  }
                 : undefined
             }
             className={`
@@ -54,35 +55,36 @@ function Navbar() {
       tracking-[-0.432px]
       transition-all duration-300
 
-      ${currentPage === '/poin-inti' || currentPage === '/'
-                ? `
+      ${
+        currentPage === "/poin-inti" || currentPage === "/"
+          ? `
             px-3 md:px-[16px] py-1.5 md:py-[8px]
             gap-1 md:gap-[12.732px]
             rounded-[12px]
             text-[#F5F5F5]
             shadow-[0_185px_52px_0_rgba(62,24,197,0),0_119px_47px_0_rgba(62,24,197,0.03),0_67px_40px_0_rgba(62,24,197,0.10),0_30px_30px_0_rgba(62,24,197,0.17),0_7px_16px_0_rgba(62,24,197,0.20)]
           `
-                : `
+          : `
             px-2 md:px-[6px] py-1 md:py-[4px]
             gap-[10px]
             text-[#505050]
             hover:text-[#303030]
           `
-              }
+      }
     `}
           >
-            Point Inti
+            Poin Inti
           </button>
 
           {/* Memori */}
           <button
-            onClick={() => navigate('/memori')}
+            onClick={() => navigate("/memori")}
             style={
-              currentPage === '/memori'
+              currentPage === "/memori"
                 ? {
-                  background:
-                    'radial-gradient(44.33% 44.33% at 50.2% 0%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%), #6C40E5',
-                }
+                    background:
+                      "radial-gradient(44.33% 44.33% at 50.2% 0%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%), #6C40E5",
+                  }
                 : undefined
             }
             className={`
@@ -96,26 +98,26 @@ function Navbar() {
       tracking-[-0.432px]
       transition-all duration-300
 
-      ${currentPage === '/memori'
-                ? `
+      ${
+        currentPage === "/memori"
+          ? `
             px-3 md:px-[16px] py-1.5 md:py-[8px]
             gap-1 md:gap-[12.732px]
             rounded-[12px]
             text-[#F5F5F5]
             shadow-[0_185px_52px_0_rgba(62,24,197,0),0_119px_47px_0_rgba(62,24,197,0.03),0_67px_40px_0_rgba(62,24,197,0.10),0_30px_30px_0_rgba(62,24,197,0.17),0_7px_16px_0_rgba(62,24,197,0.20)]
           `
-                : `
+          : `
             px-2 md:px-[6px] py-1 md:py-[4px]
             gap-[10px]
             text-[#505050]
             hover:text-[#303030]
           `
-              }
+      }
     `}
           >
             Memori
           </button>
-
         </div>
 
         <a
@@ -124,7 +126,7 @@ function Navbar() {
           rel="noopener noreferrer"
           style={{
             background:
-              'radial-gradient(44.33% 44.33% at 50.2% 0%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%), #6C40E5',
+              "radial-gradient(44.33% 44.33% at 50.2% 0%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%), #6C40E5",
           }}
           className="
     group
@@ -149,7 +151,6 @@ function Navbar() {
   "
         >
           Lihat Effort
-
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
