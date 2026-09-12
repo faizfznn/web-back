@@ -13,9 +13,17 @@ import FOTO_12 from "./foto-12.png";
 import FOTO_13 from "./foto-13.jpeg";
 import FOTO_14 from "./foto-14.jpg";
 import VIDEO_1 from "./video-1.mp4";
+import VIDEO_2 from "./video-2.mp4";
 
 const MEMORI_MEDIA = [
-  { src: FOTO_1, title: "Happy Girlfriend Day", caption: "💖" },
+  {
+    src: VIDEO_2,
+    mediaType: "video",
+    title: "Video Awal Kamu Mengirim Ke Aku",
+    caption: "Memperagakan Emot 💁🏻",
+  },
+  { src: FOTO_14, title: "Rara Nakal #1", caption: "Faiz Request Emot Fuck" },
+  { src: FOTO_1, title: "Happy Girlfriend Day", caption: "" },
   { src: FOTO_2, title: "Senyum bareng terus ya", caption: "✨🌻💛" },
   { src: FOTO_3, title: "Selalu sama kamu", caption: "🫶🏻🫶🏻🫶🏻" },
   { src: FOTO_4, title: "Memori #4", caption: "💙💜🤎" },
@@ -28,7 +36,6 @@ const MEMORI_MEDIA = [
   { src: FOTO_11, title: "Memori #11", caption: "💖🌻💖" },
   { src: FOTO_12, title: "Memori #12", caption: "🫶🏻✨🫶🏻" },
   { src: FOTO_13, title: "Memori #13", caption: "💛🤍💛" },
-  { src: FOTO_14, title: "Memori #14", caption: "💙💜💙" },
   { src: VIDEO_1, mediaType: "video", title: "Memori video", caption: "🎞️💖" },
 ];
 
