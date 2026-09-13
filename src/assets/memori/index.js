@@ -27,15 +27,14 @@ import FOTO_21 from "./foto-21.jpg";
 import FOTO_22 from "./foto-22.jpg";
 import FOTO_23 from "./foto-23.jpg";
 import FOTO_24 from "./foto-24.jpg";
-import FOTO_CANTIK_1 from "./foto-cantik-1.jpg";
-import FOTO_CANTIK_2 from "./foto-cantik-2.jpg";
-import FOTO_CANTIK_3 from "./foto-cantik-3.jpg";
-import FOTO_CANTIK_4 from "./foto-cantik-4.jpg";
-import FOTO_CANTIK_5 from "./foto-cantik-5.jpg";
-import FOTO_CANTIK_6 from "./foto-cantik-6.jpg";
-import FOTO_CANTIK_7 from "./foto-cantik-7.jpg";
-import FOTO_LOMBA_1 from "./foto-lomba-1.jpg";
-
+// import FOTO_CANTIK_1 from "./foto-cantik-1.jpg";
+// import FOTO_CANTIK_2 from "./foto-cantik-2.jpg";
+// import FOTO_CANTIK_3 from "./foto-cantik-3.jpg";
+// import FOTO_CANTIK_4 from "./foto-cantik-4.jpg";
+// import FOTO_CANTIK_5 from "./foto-cantik-5.jpg";
+// import FOTO_CANTIK_6 from "./foto-cantik-6.jpg";
+// import FOTO_CANTIK_7 from "./foto-cantik-7.jpg";
+// import FOTO_LOMBA_1 from "./foto-lomba-1.jpg";
 
 const MEMORI_MEDIA = [
   { src: FOTO_2, title: "MC Bareng", caption: "Kamu cantik banget sayang" },
@@ -166,9 +165,21 @@ const MEMORI_MEDIA = [
     title: "Masyaallah Cantik bangettt",
     caption: "AKU SUKA OUTFIT KAMU DISINI SAYANG",
   },
-  { src: FOTO_19, title: "Jenguk kamu sehabis interview Apdev", caption: "kamu disini cakep bgt make up dan outfitnya" },
-  { src: FOTO_20, title: "Lanjut main ice skating", caption: "nanti main lagi yaa sayang sampai jago" },
-  { src: FOTO_21, title: "Sayang cakep bangett siii", caption: "ya allah cakep bgt ciptaanmu" },
+  {
+    src: FOTO_19,
+    title: "Jenguk kamu sehabis interview Apdev",
+    caption: "kamu disini cakep bgt make up dan outfitnya",
+  },
+  {
+    src: FOTO_20,
+    title: "Lanjut main ice skating",
+    caption: "nanti main lagi yaa sayang sampai jago",
+  },
+  {
+    src: FOTO_21,
+    title: "Sayang cakep bangett siii",
+    caption: "ya allah cakep bgt ciptaanmu",
+  },
 ];
 
 const ROTATION_CLASSES = [
