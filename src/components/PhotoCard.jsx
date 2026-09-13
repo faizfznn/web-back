@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 function PhotoCard({
   imageUrl,
   mediaType = "image",
+  flipVideo = false,
   title,
   caption,
   rotationClass,
@@ -29,7 +30,7 @@ function PhotoCard({
             loop
             muted
             playsInline
-            className="w-full h-full object-cover transition-transform duration-700"
+            className={`w-full h-full object-cover transition-transform duration-700 ${flipVideo ? "rotate-180" : ""}`}
           />
         ) : (
           <img

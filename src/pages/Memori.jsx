@@ -38,6 +38,7 @@ function Memori() {
             key={memory.id}
             imageUrl={memory.src}
             mediaType={memory.mediaType}
+            flipVideo={memory.flipVideo}
             title={memory.title}
             caption={memory.caption}
             rotationClass={`${memory.rotationClass} ${memory.layoutClass}`}
