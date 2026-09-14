@@ -1,11 +1,35 @@
+import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import logoRara from "../assets/logo-rara.png";
 import logoFaiz from "../assets/logo-faiz.png";
+
+function isMobileOrTablet() {
+  if (typeof navigator === "undefined") return false;
+
+  const userAgent = navigator.userAgent || "";
+  const isIpad =
+    /iPad/i.test(userAgent) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  const isPhone =
+    /Android|iPhone|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+
+  return isPhone || isIpad || window.matchMedia("(max-width: 768px)").matches;
+}
 
 function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
   const currentPage = location.pathname;
+  const [showMemoriReminder, setShowMemoriReminder] = useState(false);
+
+  const openMemori = () => {
+    if (isMobileOrTablet()) {
+      setShowMemoriReminder(true);
+      return;
+    }
+
+    navigate("/memori");
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center p-4 pt-6">
@@ -78,7 +102,7 @@ function Navbar() {
 
           {/* Memori */}
           <button
-            onClick={() => navigate("/memori")}
+            onClick={openMemori}
             style={
               currentPage === "/memori"
                 ? {
@@ -167,6 +191,56 @@ function Navbar() {
           </svg>
         </a>
       </div>
+
+      {showMemoriReminder && (
+        <div
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/40 px-5 backdrop-blur-sm"
+          role="presentation"
+          onClick={() => setShowMemoriReminder(false)}
+        >
+          <div
+            className="w-full max-w-sm rounded-2xl bg-white p-6 text-left shadow-2xl animate-slide-up"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="memori-reminder-title"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <p className="mb-2 font-['Satoshi'] text-xs font-bold uppercase tracking-[0.18em] text-[#6C40E5]">
+              Sebelum masuk
+            </p>
+            <h2
+              id="memori-reminder-title"
+              className="font-['Satoshi'] text-xl font-bold leading-tight text-gray-900"
+            >
+              Halaman Memori cukup berat
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-gray-600">
+              Isinya kumpulan memori kita dari awal sampai sekarang, termasuk
+              foto dan video. Pastikan koneksi internetmu cukup stabil sebelum
+              melanjutkan.
+            </p>
+            <div className="mt-6 flex gap-3">
+              <button
+                type="button"
+                onClick={() => setShowMemoriReminder(false)}
+                className="flex-1 rounded-xl border border-gray-200 px-4 py-3 font-['Satoshi'] text-sm font-medium text-gray-600 transition-colors hover:bg-gray-50"
+              >
+                Kembali
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setShowMemoriReminder(false);
+                  navigate("/memori");
+                }}
+                className="flex-1 rounded-xl bg-[#6C40E5] px-4 py-3 font-['Satoshi'] text-sm font-medium text-white transition-colors hover:bg-[#5930c8]"
+              >
+                Lanjut ke Memori
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

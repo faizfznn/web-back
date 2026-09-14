@@ -27,14 +27,14 @@ import FOTO_21 from "./foto-21.jpg";
 import FOTO_22 from "./foto-22.jpg";
 import FOTO_23 from "./foto-23.jpg";
 import FOTO_24 from "./foto-24.jpg";
-// import FOTO_CANTIK_1 from "./foto-cantik-1.jpg";
-// import FOTO_CANTIK_2 from "./foto-cantik-2.jpg";
-// import FOTO_CANTIK_3 from "./foto-cantik-3.jpg";
-// import FOTO_CANTIK_4 from "./foto-cantik-4.jpg";
-// import FOTO_CANTIK_5 from "./foto-cantik-5.jpg";
-// import FOTO_CANTIK_6 from "./foto-cantik-6.jpg";
-// import FOTO_CANTIK_7 from "./foto-cantik-7.jpg";
-// import FOTO_LOMBA_1 from "./foto-lomba-1.jpg";
+import FOTO_CANTIK_1 from "./foto-cantik-1.jpg";
+import FOTO_CANTIK_2 from "./foto-cantik-2.jpg";
+import FOTO_CANTIK_3 from "./foto-cantik-3.jpg";
+import FOTO_CANTIK_4 from "./foto-cantik-4.jpg";
+import FOTO_CANTIK_5 from "./foto-cantik-5.jpg";
+import FOTO_CANTIK_6 from "./foto-cantik-6.jpg";
+import FOTO_CANTIK_7 from "./foto-cantik-7.jpg";
+import FOTO_LOMBA_1 from "./foto-lomba-1.jpg";
 
 const MEMORI_MEDIA = [
   { src: FOTO_2, title: "MC Bareng", caption: "Kamu cantik banget sayang" },
@@ -100,16 +100,6 @@ const MEMORI_MEDIA = [
     caption: "Ini di Omah Datok",
   },
   {
-    src: FOTO_18,
-    title: "Asik pacaran di klaten",
-    // caption: "Lucuk banget, apalagi orang samping aku",
-  },
-  {
-    src: FOTO_17,
-    title: "Bukber Jos",
-    caption: "Double Date",
-  },
-  {
     src: FOTO_23,
     title: "Happy Anniversary 1 Tahun Sayangg",
     caption: "sayang aku lemes pas ngeliat kamu cakep bgt",
@@ -120,22 +110,14 @@ const MEMORI_MEDIA = [
     // caption: "sayang aku lemes pas ngeliat kamu cakep bgt",
   },
   {
-    src: VIDEO_1,
-    mediaType: "video",
-    title: "Merayakan Ultah Aku",
-    caption: "Aku di prank",
+    src: FOTO_18,
+    title: "Asik pacaran di klaten",
+    // caption: "Lucuk banget, apalagi orang samping aku",
   },
   {
-    src: VIDEO_4,
-    mediaType: "video",
-    title: "Merayakan Ultah Aku",
-    caption: "Aku di prank",
-  },
-  {
-    src: VIDEO_5,
-    mediaType: "video",
-    title: "Merayakan Ultah Aku",
-    caption: "Aku di prank",
+    src: FOTO_17,
+    title: "Bukber Jos",
+    caption: "Double Date",
   },
   {
     src: VIDEO_6,
@@ -150,6 +132,24 @@ const MEMORI_MEDIA = [
     // flipVideo: true,
     title: "Yipi yayoi pantai",
     caption: "sebelum berpisah",
+  },
+  {
+    src: VIDEO_1,
+    mediaType: "video",
+    title: "Merayakan Ultah Aku",
+    caption: "Aku di prank",
+  },
+  {
+    src: VIDEO_4,
+    mediaType: "video",
+    title: "Capcut Edit #1",
+    caption: "Terimakasih sayang ssudah membuatkan video lucu ini, yang aku up ke sg",
+  },
+  {
+    src: VIDEO_5,
+    mediaType: "video",
+    title: "Capcut Edit #2",
+    caption: "Terimakasih sayang ssudah membuatkan video lucu ini, yang aku up ke sg",
   },
   {
     src: VIDEO_9,
@@ -179,6 +179,46 @@ const MEMORI_MEDIA = [
     src: FOTO_21,
     title: "Sayang cakep bangett siii",
     caption: "ya allah cakep bgt ciptaanmu",
+  },
+  {
+    src: FOTO_CANTIK_1,
+    title: "Masyaallah Sayang Cakep BGT #1",
+    // caption: "ya allah cakep bgt ciptaanmu",
+  },
+  {
+    src: FOTO_CANTIK_2,
+    title: "Masyaallah Sayang Cakep BGT #2",
+    // caption: "ya allah cakep bgt ciptaanmu",
+  },
+  {
+    src: FOTO_CANTIK_3,
+    title: "Masyaallah Sayang Cakep BGT #3",
+    // caption: "yaallah cakep bgt ciptaanmu",
+  },
+  {
+    src: FOTO_CANTIK_4,
+    title: "Masyaallah Sayang Cakep BGT #4",
+    // caption: "ya allah cakep bgt ciptaanmu",
+  },
+  {
+    src: FOTO_CANTIK_5,
+    title: "Masyaallah Sayang Cakep BGT #5",
+    // caption: "ya allah cakep bgt ciptaanmu",
+  },
+  {
+    src: FOTO_CANTIK_6,
+    title: "Masyaallah Sayang Cakep BGT #6",
+    caption: "Shadira Banget Sayang",
+  },
+  {
+    src: FOTO_CANTIK_7,
+    title: "Masyaallah Sayang Cakep BGT #7",
+    // caption: "ya allah cakep bgt ciptaanmu",
+  },
+  {
+    src: FOTO_LOMBA_1,
+    title: "Keluar Kota Karena Lomba #1",
+    caption: "Meskipun NT",
   },
 ];
 
