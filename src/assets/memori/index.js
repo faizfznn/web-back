@@ -38,6 +38,8 @@ import VIDEO_37 from "./video-37.mp4";
 import VIDEO_38 from "./video-38.mp4";
 import VIDEO_39 from "./video-39.mp4";
 import VIDEO_40 from "./video-40.mp4";
+import VIDEO_41 from "./video-41.mp4";
+import VIDEO_42 from "./video-42.mp4";
 import FOTO_1 from "./foto-1.jpg";
 import FOTO_2 from "./foto-2.jpg";
 import FOTO_3 from "./foto-3.JPG";
@@ -79,6 +81,9 @@ import FOTO_42 from "./foto-42.jpeg";
 import FOTO_43 from "./foto-43.jpeg";
 import FOTO_44 from "./foto-44.jpeg";
 import FOTO_45 from "./foto-45.jpeg";
+import FOTO_46 from "./foto-46.jpeg";
+import FOTO_47 from "./foto-47.jpeg";
+import FOTO_48 from "./foto-48.jpeg";
 import FOTO_CANTIK_1 from "./foto-cantik-1.jpg";
 import FOTO_CANTIK_2 from "./foto-cantik-2.jpg";
 import FOTO_CANTIK_3 from "./foto-cantik-3.jpg";
@@ -111,6 +116,12 @@ const MEMORI_MEDIA = [
   },
   { src: FOTO_1, title: "Rara Nakal #1", caption: "Faiz Request Emot Fuck" },
   { src: FOTO_3, title: "Study Date #2", caption: "Gutenham kesayangan rara" },
+  {
+    src: VIDEO_41,
+    mediaType: "video",
+    title: "TIKTOKAN REQ AKU DI SELA STUDY DATE #2",
+    // caption: "Ngambek ga sekelompok",
+  },
   {
     src: VIDEO_22,
     mediaType: "video",
@@ -237,6 +248,30 @@ const MEMORI_MEDIA = [
     src: FOTO_28,
     title: "AVVV DIKECUP LEHERNYAAA, MAU LAGI SAYANG ADA WATERMARK INI",
     caption: "UNTUK SAAT INI DI TANGAN DLU AJAAA YAAA SAYANG",
+  },
+  {
+    src: FOTO_46,
+    title: "dijadiin canvas buat tes makeup",
+    caption:
+      "MAU NEMENIN KAMU KYK GINI LAGIII SAYANG, AKU ADALAH CANVAS KOSONG YANG BUTUH KAMU MEWARNAI HIDUP KU",
+  },
+  {
+    src: FOTO_47,
+    title:
+      "AVVV DIKECUP LENGAN AKU, MAU LAGI SAYANG ADA WATERMARK INI, NANTI AKU GYM BIAR TAMBAH BESAR",
+    caption: "UNTUK SAAT INI DI TANGAN DLU AJAAA YAAA SAYANG",
+  },
+  {
+    src: FOTO_48,
+    title: "dilukis bibir di tanganakuuu, MAU LAGI SAYANG ADA WATERMARK INI",
+    caption: "kamu belom berani cium waktu itu",
+  },
+  {
+    src: VIDEO_42,
+    mediaType: "video",
+    title: "AVVV DIKECUP TANGANAKU, MAU LAGI SAYANG ADA WATERMARK INI",
+    caption:
+      "INI PAS UDAH PUTUS KAMU KECUP INI PAS TANGGAL 15 SEPTEMBER SETELAH RAPAT BOD",
   },
   {
     src: FOTO_32,
