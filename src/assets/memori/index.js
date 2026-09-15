@@ -7,6 +7,18 @@ import VIDEO_7 from "./video-7.mp4";
 import VIDEO_8 from "./video-8.mp4";
 import VIDEO_9 from "./video-9.mp4";
 import VIDEO_10 from "./video-10.mp4";
+import VIDEO_11 from "./video-11.mp4";
+import VIDEO_12 from "./video-12.mp4";
+import VIDEO_13 from "./video-13.mp4";
+import VIDEO_14 from "./video-14.mp4";
+import VIDEO_15 from "./video-15.mp4";
+import VIDEO_16 from "./video-16.mp4";
+import VIDEO_17 from "./video-17.mp4";
+import VIDEO_18 from "./video-18.mp4";
+import VIDEO_19 from "./video-19.mp4";
+import VIDEO_20 from "./video-20.mp4";
+import VIDEO_21 from "./video-21.mp4";
+import VIDEO_22 from "./video-22.mp4";
 import FOTO_1 from "./foto-1.jpg";
 import FOTO_2 from "./foto-2.jpg";
 import FOTO_3 from "./foto-3.JPG";
@@ -46,6 +58,12 @@ const MEMORI_MEDIA = [
   },
   { src: FOTO_1, title: "Rara Nakal #1", caption: "Faiz Request Emot Fuck" },
   { src: FOTO_3, title: "Study Date #2", caption: "Gutenham kesayangan rara" },
+  {
+    src: VIDEO_22,
+    mediaType: "video",
+    title: "Kelas SA",
+    caption: "Ngambek ga sekelompok",
+  },
   {
     src: FOTO_7,
     title: "Pulang Study Date #1",
@@ -100,6 +118,27 @@ const MEMORI_MEDIA = [
     caption: "Ini di Omah Datok",
   },
   {
+    src: VIDEO_21,
+    mediaType: "video",
+    // flipVideo: false,
+    title: "Study Date #5",
+    caption: "Ini di Omah Datok lagi cintaaa",
+  },
+  {
+    src: VIDEO_13,
+    mediaType: "video",
+    // flipVideo: false,
+    title: "rara suka bayiii",
+    caption: "aku suka deh sayang kamu sudah bayiii",
+  },
+  {
+    src: VIDEO_15,
+    mediaType: "video",
+    // flipVideo: false,
+    title: "Study Date #6",
+    caption: "ini di oyi dan kamu sampai ketidurann, aku happy menemani kamu",
+  },
+  {
     src: FOTO_23,
     title: "Happy Anniversary 1 Tahun Sayangg",
     caption: "sayang aku lemes pas ngeliat kamu cakep bgt",
@@ -108,16 +147,6 @@ const MEMORI_MEDIA = [
     src: FOTO_24,
     title: "Happy Anniversary 1 Tahun Sayangg",
     // caption: "sayang aku lemes pas ngeliat kamu cakep bgt",
-  },
-  {
-    src: FOTO_18,
-    title: "Asik pacaran di klaten",
-    // caption: "Lucuk banget, apalagi orang samping aku",
-  },
-  {
-    src: FOTO_17,
-    title: "Bukber Jos",
-    caption: "Double Date",
   },
   {
     src: VIDEO_6,
@@ -134,24 +163,6 @@ const MEMORI_MEDIA = [
     caption: "sebelum berpisah",
   },
   {
-    src: VIDEO_1,
-    mediaType: "video",
-    title: "Merayakan Ultah Aku",
-    caption: "Aku di prank",
-  },
-  {
-    src: VIDEO_4,
-    mediaType: "video",
-    title: "Capcut Edit #1",
-    caption: "Terimakasih sayang ssudah membuatkan video lucu ini, yang aku up ke sg",
-  },
-  {
-    src: VIDEO_5,
-    mediaType: "video",
-    title: "Capcut Edit #2",
-    caption: "Terimakasih sayang ssudah membuatkan video lucu ini, yang aku up ke sg",
-  },
-  {
     src: VIDEO_9,
     mediaType: "video",
     // flipVideo: true,
@@ -164,6 +175,87 @@ const MEMORI_MEDIA = [
     // flipVideo: true,
     title: "Masyaallah Cantik bangettt",
     caption: "AKU SUKA OUTFIT KAMU DISINI SAYANG",
+  },
+  {
+    src: VIDEO_11,
+    mediaType: "video",
+    // flipVideo: true,
+    title: "LDR ke 3 Kalinya",
+    caption: "Maaf yaaa sayang ikan kamu jadinya hilanggg",
+  },
+  {
+    src: VIDEO_12,
+    mediaType: "video",
+    // flipVideo: true,
+    title: "LDR ke 3 Kalinya",
+    caption:
+      "Babaiii sayangkuuu cintakuuu, sehabis videoin ini aku nangis di toilet kereta",
+  },
+  {
+    src: FOTO_18,
+    title: "Asik pacaran di klaten",
+    // caption: "Lucuk banget, apalagi orang samping aku",
+  },
+  {
+    src: FOTO_17,
+    title: "Bukber Jos",
+    caption: "Double Date",
+  },
+  {
+    src: VIDEO_16,
+    mediaType: "video",
+    title: "Jalan2 ke Klatos",
+    caption: "Double Date",
+  },
+  {
+    src: VIDEO_17,
+    mediaType: "video",
+    title: "Bermain Escape Room Zombie",
+    caption: "AKU CUKA OUTFIT KAMU DISINI SAYANG",
+  },
+  {
+    src: VIDEO_18,
+    mediaType: "video",
+    title: "Outfit Check #1",
+    caption: "Outfit Check di Tempat Escape Room",
+  },
+  {
+    src: VIDEO_19,
+    mediaType: "video",
+    title: "Outfit Check #2",
+    caption: "Outfit Check di UB Dieng",
+  },
+  {
+    src: VIDEO_20,
+    mediaType: "video",
+    title: "Memakaikan Sepatu Princess",
+    caption: "ALHAMDULILLAH UKURANNYA COCOK, aku jadi pendamping kamu",
+  },
+  {
+    src: VIDEO_1,
+    mediaType: "video",
+    title: "Merayakan Ultah Aku",
+    caption: "Aku di prank",
+  },
+  {
+    src: VIDEO_14,
+    mediaType: "video",
+    title: "Merayakan Ultah Aku",
+    caption: "Aku di prank",
+  },
+  {
+    src: VIDEO_4,
+    mediaType: "video",
+    title: "Capcut Edit #1",
+    caption:
+      "Terimakasih sayang ssudah membuatkan video lucu ini, yang aku up ke sg",
+  },
+  {
+    src: VIDEO_5,
+    mediaType: "video",
+    title: "Capcut Edit #2",
+    caption:
+      "Terimakasih sayang ssudah membuatkan video lucu ini, yang aku up ke sg",
   },
   {
     src: FOTO_19,
