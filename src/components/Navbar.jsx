@@ -145,7 +145,7 @@ function Navbar() {
         </div>
 
         <a
-          href="https://drive.google.com/"
+          href="clips.id/effort"
           target="_blank"
           rel="noopener noreferrer"
           style={{
