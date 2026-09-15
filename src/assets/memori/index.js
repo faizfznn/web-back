@@ -39,6 +39,8 @@ import FOTO_21 from "./foto-21.jpg";
 import FOTO_22 from "./foto-22.jpg";
 import FOTO_23 from "./foto-23.jpg";
 import FOTO_24 from "./foto-24.jpg";
+import FOTO_25 from "./foto-25.jpg";
+import FOTO_26 from "./foto-26.jpg";
 import FOTO_CANTIK_1 from "./foto-cantik-1.jpg";
 import FOTO_CANTIK_2 from "./foto-cantik-2.jpg";
 import FOTO_CANTIK_3 from "./foto-cantik-3.jpg";
@@ -46,6 +48,11 @@ import FOTO_CANTIK_4 from "./foto-cantik-4.jpg";
 import FOTO_CANTIK_5 from "./foto-cantik-5.jpg";
 import FOTO_CANTIK_6 from "./foto-cantik-6.jpg";
 import FOTO_CANTIK_7 from "./foto-cantik-7.jpg";
+import FOTO_CANTIK_8 from "./foto-cantik-8.jpg";
+import FOTO_CANTIK_9 from "./foto-cantik-9.jpg";
+import FOTO_CANTIK_10 from "./foto-cantik-10.jpg";
+import FOTO_CANTIK_11 from "./foto-cantik-11.jpg";
+import FOTO_CANTIK_12 from "./foto-cantik-12.jpg";
 import FOTO_LOMBA_1 from "./foto-lomba-1.jpg";
 
 const MEMORI_MEDIA = [
@@ -123,6 +130,16 @@ const MEMORI_MEDIA = [
     // flipVideo: false,
     title: "Study Date #5",
     caption: "Ini di Omah Datok lagi cintaaa",
+  },
+  {
+    src: FOTO_26,
+    title: "Prewed di First Gathering Staf SGE",
+    caption: "orang2 bilangnya prewed HEHEHEH",
+  },
+  {
+    src: FOTO_25,
+    title: "Foto disela kesibukan TO LAPANG",
+    // caption: "sayang aku lemes pas ngeliat kamu cakep bgt",
   },
   {
     src: VIDEO_13,
@@ -305,6 +322,31 @@ const MEMORI_MEDIA = [
   {
     src: FOTO_CANTIK_7,
     title: "Masyaallah Sayang Cakep BGT #7",
+    caption: "aku senang kamu menunjukkan makeup mu ke aku sayang, aku sukaaa",
+  },
+  {
+    src: FOTO_CANTIK_8,
+    title: "Masyaallah Sayang Cakep BGT #8",
+    // caption: "ya allah cakep bgt ciptaanmu",
+  },
+  {
+    src: FOTO_CANTIK_9,
+    title: "Masyaallah Sayang Cakep BGT #9",
+    // caption: "ya allah cakep bgt ciptaanmu",
+  },
+  {
+    src: FOTO_CANTIK_10,
+    title: "Masyaallah Sayang Cakep BGT #10",
+    // caption: "ya allah cakep bgt ciptaanmu",
+  },
+  {
+    src: FOTO_CANTIK_11,
+    title: "Masyaallah Sayang Cakep BGT #11",
+    // caption: "ya allah cakep bgt ciptaanmu",
+  },
+  {
+    src: FOTO_CANTIK_12,
+    title: "Masyaallah Sayang Cakep BGT di Farewell PK2 #12",
     // caption: "ya allah cakep bgt ciptaanmu",
   },
   {
