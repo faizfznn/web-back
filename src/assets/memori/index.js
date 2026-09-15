@@ -178,6 +178,88 @@ const MEMORI_MEDIA = [
     caption: "Ini di Omah Datok lagi cintaaa",
   },
   {
+    src: FOTO_38,
+    title: "Study Date #5",
+    caption: "",
+  },
+  {
+    src: VIDEO_33,
+    mediaType: "video",
+    title: "Study Date #7",
+    caption: "ini aku tidur dipangkuan kamu",
+  },
+  {
+    src: FOTO_39,
+    title: "Berfoto bersama di OH PK2",
+    caption: "matching lagi bajunya sama2 biru",
+  },
+  {
+    src: FOTO_37,
+    title:
+      "Terimakasih sayang sudah mau support aku untuk MC di debug, DEBUT AKUH",
+    caption:
+      "dan terimakasih yaaa sayangkuuu atas kadonyaa, aku sukaaa bingits",
+  },
+  {
+    src: FOTO_36,
+    title: "Sicantik menemani siganteng MC",
+    caption: "",
+  },
+  {
+    src: FOTO_30,
+    title: "kamu kegedean pake sweater akuu",
+    caption:
+      "tandanya kamu sudah kurus sayang, jgn sakit2 grgr mau kurusss yaaa",
+  },
+  {
+    src: FOTO_33,
+    title: "YEAYYYYYYYYYYYY FOTO KITA BLURRR",
+    caption: "CANTIKKKK BGT CEUNAH OUTFITNYA JUGA BAGUS SEKALI",
+  },
+  {
+    src: FOTO_34,
+    title: "Masyaallah sayangkuuu cantik bgt, keren kan brush LOVE aku",
+    caption: "",
+  },
+  {
+    src: FOTO_35,
+    title: "WKWKWKWK AQUARIUM DATE, NEXT TIME DI JAKARTAAA YAAA SENG",
+    caption: "",
+  },
+  {
+    src: VIDEO_40,
+    mediaType: "video",
+    title: "Gala Premier",
+    caption:
+      "Ya allah akhirnya kelar yaaa proker itu, sebagai support system aku bangga sengg",
+  },
+  {
+    src: FOTO_28,
+    title: "AVVV DIKECUP LEHERNYAAA, MAU LAGI SAYANG ADA WATERMARK INI",
+    caption: "UNTUK SAAT INI DI TANGAN DLU AJAAA YAAA SAYANG",
+  },
+  {
+    src: FOTO_32,
+    title: "Jogging Date yang berujung jalan kaki mencari jajanan",
+    caption: "cocok bgt cantik dan ganteng, ada tu jogging pegangan tangan",
+  },
+  {
+    src: VIDEO_35,
+    mediaType: "video",
+    title: "Asik PotoStudio",
+    caption: "banyak bgt ini gayanya seng, ga mati gaya alhamdulillah",
+  },
+  {
+    src: FOTO_31,
+    title: "Art Date dan bertemu danish disniii",
+    caption: "pelarian karena kamu gabisa dateng artro",
+  },
+  {
+    src: FOTO_29,
+    title: "Foto farewell bem artaaa",
+    caption: "candid cantik ceunah",
+  },
+  {
     src: FOTO_26,
     title: "Prewed di First Gathering Staf SGE",
     caption: "orang2 bilangnya prewed HEHEHEH",
@@ -186,6 +268,24 @@ const MEMORI_MEDIA = [
     src: FOTO_25,
     title: "Foto disela kesibukan TO LAPANG",
     // caption: "sayang aku lemes pas ngeliat kamu cakep bgt",
+  },
+  {
+    src: VIDEO_37,
+    mediaType: "video",
+    title: "Makan Purnama di Sigura2, terimakasih sayang sudah suapin akuuu",
+    caption: "outfit OG kamu itu senggg",
+  },
+  {
+    src: VIDEO_36,
+    mediaType: "video",
+    title: "mengerjakan PR merakit bricks bareng di cotaslice",
+    caption: "",
+  },
+  {
+    src: VIDEO_38,
+    mediaType: "video",
+    title: "Yap Cotaslice lagi, kamu tim bolognase, aku tim carbonara",
+    caption: "",
   },
   {
     src: VIDEO_13,
@@ -203,8 +303,21 @@ const MEMORI_MEDIA = [
     src: VIDEO_15,
     mediaType: "video",
     // flipVideo: false,
-    title: "Study Date #6",
+    title: "Study Date #8",
     caption: "ini di oyi dan kamu sampai ketidurann, aku happy menemani kamu",
+  },
+  {
+    src: VIDEO_25,
+    mediaType: "video",
+    title: "Ya allah anak kecil ini, aku seneng bgt mengurusi kamu",
+    caption:
+      "sayang jgn cepet2 besar yah, nanti pas balikan aku mau jadi lebih dewasa lagi, biar bisa ngurusin kamu lebih baik lagi",
+  },
+  {
+    src: VIDEO_39,
+    mediaType: "video",
+    title: "aku ajarin kamu main game di galaxy gaming",
+    caption: "next  main lagi yuk seng, tapi yg vip dan yg nintendo switch",
   },
   {
     src: FOTO_23,
@@ -215,6 +328,23 @@ const MEMORI_MEDIA = [
     src: FOTO_24,
     title: "Happy Anniversary 1 Tahun Sayangg",
     // caption: "sayang aku lemes pas ngeliat kamu cakep bgt",
+  },
+  {
+    src: FOTO_40,
+    title: "Masyaallah sayangku cinta ini kamu cantik bgt",
+    caption: "kamu gamau makan aku aja kah seng?",
+  },
+  {
+    src: VIDEO_26,
+    mediaType: "video",
+    title: "Ini pas perayaan anniv setahun",
+    caption: "kamu disini cerita awal2 km suka sama aku pas TO LAPANG",
+  },
+  {
+    src: FOTO_45,
+    title:
+      "Ya allah ini yang cantik air terjunnya atau orang disamping aku si sayang",
+    caption: "terimakasih yaaa sayang ssudah mau tukeran sendal dengan sepatu",
   },
   {
     src: VIDEO_6,
@@ -235,6 +365,12 @@ const MEMORI_MEDIA = [
     mediaType: "video",
     // flipVideo: true,
     title: "Berputar2 di pantaiiii",
+    caption: "",
+  },
+  {
+    src: VIDEO_34,
+    mediaType: "video",
+    title: "I Love You Too Sayangkuuu",
     caption: "",
   },
   {
@@ -312,6 +448,98 @@ const MEMORI_MEDIA = [
     caption: "Aku di prank",
   },
   {
+    src: FOTO_19,
+    title: "Jenguk kamu sehabis interview Apdev",
+    caption: "kamu disini cakep bgt make up dan outfitnya",
+  },
+  {
+    src: FOTO_20,
+    title: "Lanjut main ice skating",
+    caption: "nanti main lagi yaa sayang sampai jago",
+  },
+  {
+    src: FOTO_21,
+    title: "Sayang cakep bangett siii",
+    caption: "ya allah cakep bgt ciptaanmu",
+  },
+  {
+    src: VIDEO_23,
+    mediaType: "video",
+    title: "HAHAHAHAH SAYANG LUCU SEKALII KAMU MAIN ICE SKATING",
+    caption:
+      "nanti latihan lagi yaa sayang, biar bisa main ice skating lebih lancar",
+  },
+  {
+    src: VIDEO_24,
+    mediaType: "video",
+    title: "SAYANG KALO MAU JATOH MEGANG DENGKUL",
+    caption:
+      "nanti latihan lagi yaa sayang, biar bisa main ice skating lebih lancar",
+  },
+  {
+    src: VIDEO_27,
+    mediaType: "video",
+    title: "Kamu ketiduran di motor karena capek belajar",
+    caption: "ini ada kali 10 menit di motor gini, baru aku bangunin",
+  },
+  {
+    src: VIDEO_28,
+    mediaType: "video",
+    title: "Kamu ketiduran di motor karena capek belajar",
+    caption: "ini ada kali 10 menit di motor gini, baru aku bangunin",
+  },
+  {
+    src: FOTO_41,
+    title: "MC RAION, LUVVV BGT DECH BATIK BAWAHNYA, DAN KERUDUNGNYA",
+    caption: "",
+  },
+  {
+    src: FOTO_LOMBA_1,
+    title: "Keluar Kota Karena Lomba #1",
+    caption: "Meskipun NT",
+  },
+  {
+    src: FOTO_42,
+    title: "OTW KE RUMAH MERTUAAA",
+    caption: "",
+  },
+  {
+    src: FOTO_43,
+    title: "CISSSS SAYANGKUUU 1 2 3",
+    caption: "CANTING BGT SAYANGKUUU",
+  },
+  {
+    src: FOTO_44,
+    title: "Anjas foto di citylight jakartaaa",
+    caption: "ayooo cintaaaa nanti bermain lagi di jakarta as a couple",
+  },
+  {
+    src: VIDEO_29,
+    mediaType: "video",
+    title: "Kamu nginep di rumah ku pertama kalinya",
+    caption:
+      "nanti pas apdev kamu nginep lagi yaa sayang, biar ibu punya anak cewe",
+  },
+  {
+    src: VIDEO_30,
+    mediaType: "video",
+    title: "ini otw beli soto bogor yang kata kamu biasa aja",
+    caption: "kamu kepanasan disini sama hawa jakarta",
+  },
+  {
+    src: VIDEO_31,
+    mediaType: "video",
+    title: "kamu disini kebingungan pas naik MRT HEHEHEHE",
+    caption: "lucuu bgt kyk anak ilanggg",
+  },
+  {
+    src: VIDEO_32,
+    mediaType: "video",
+    title: "Sayang kamu kyk anak kecill bgt disini aku sukaaaa",
+    caption:
+      "tolong dong keluarin lagi sifat anak kecil ituuu, pasti aku ladenin",
+  },
+  {
     src: VIDEO_4,
     mediaType: "video",
     title: "Capcut Edit #1",
@@ -330,21 +558,6 @@ const MEMORI_MEDIA = [
     mediaType: "video",
     title: "Capcut Edit #3",
     caption: "",
-  },
-  {
-    src: FOTO_19,
-    title: "Jenguk kamu sehabis interview Apdev",
-    caption: "kamu disini cakep bgt make up dan outfitnya",
-  },
-  {
-    src: FOTO_20,
-    title: "Lanjut main ice skating",
-    caption: "nanti main lagi yaa sayang sampai jago",
-  },
-  {
-    src: FOTO_21,
-    title: "Sayang cakep bangett siii",
-    caption: "ya allah cakep bgt ciptaanmu",
   },
   {
     src: FOTO_CANTIK_1,
@@ -407,11 +620,6 @@ const MEMORI_MEDIA = [
     // caption: "ya allah cakep bgt ciptaanmu",
   },
   {
-    src: FOTO_CANTIK_12,
-    title: "Masyaallah Sayang Cakep BGT di Farewell PK2 #12",
-    // caption: "ya allah cakep bgt ciptaanmu",
-  },
-  {
     src: FOTO_CANTIK_13,
     title: "Masyaallah Sayang Cakep BGT #13",
     // caption: "ya allah cakep bgt ciptaanmu",
@@ -419,12 +627,13 @@ const MEMORI_MEDIA = [
   {
     src: FOTO_CANTIK_14,
     title: "Masyaallah Sayang Cakep BGT #14",
-    // caption: "ya allah cakep bgt ciptaanmu",
+    caption:
+      "itu parfum yaaa sayang basah dibaju akuuu, aku suka btw kamu pake outfit itu outer merah daleman hitam, kerah kebuka, baddie bgt",
   },
   {
     src: FOTO_CANTIK_15,
     title: "Masyaallah Sayang Cakep BGT #15",
-    // caption: "ya allah cakep bgt ciptaanmu",
+    caption: "PDH KESUKAAN AKU SELAIN PDH BUMI CAKRAWALA",
   },
   {
     src: FOTO_CANTIK_16,
@@ -439,230 +648,17 @@ const MEMORI_MEDIA = [
   {
     src: FOTO_CANTIK_18,
     title: "Masyaallah Sayang Cakep BGT #18",
-    // caption: "ya allah cakep bgt ciptaanmu",
+    caption: "udh ah cocok jadi warga jabo nantinya, cantikk bgttt",
   },
   {
     src: FOTO_CANTIK_19,
     title: "Masyaallah Sayang Cakep BGT #19",
-    // caption: "ya allah cakep bgt ciptaanmu",
+    caption: "masyaallah air terjun kalah cakep",
   },
   {
     src: FOTO_CANTIK_20,
     title: "Masyaallah Sayang Cakep BGT #20",
-    // caption: "ya allah cakep bgt ciptaanmu",
-  },
-  {
-    src: VIDEO_23,
-    mediaType: "video",
-    title: "HAHAHAHAH SAYANG LUCU SEKALII KAMU MAIN ICE SKATING",
-    caption:
-      "nanti latihan lagi yaa sayang, biar bisa main ice skating lebih lancar",
-  },
-  {
-    src: VIDEO_24,
-    mediaType: "video",
-    title: "SAYANG KALO MAU JATOH MEGANG DENGKUL",
-    caption:
-      "nanti latihan lagi yaa sayang, biar bisa main ice skating lebih lancar",
-  },
-  {
-    src: VIDEO_25,
-    mediaType: "video",
-    title: "Ya allah anak kecil ini, aku seneng bgt mengurusi kamu",
-    caption:
-      "sayang jgn cepet2 besar yah, nanti pas balikan aku mau jadi lebih dewasa lagi, biar bisa ngurusin kamu lebih baik lagi",
-  },
-  {
-    src: VIDEO_26,
-    mediaType: "video",
-    title: "Ini pas perayaan anniv setahun",
-    caption: "kamu disini cerita awal2 km suka sama aku pas TO LAPANG",
-  },
-  {
-    src: VIDEO_27,
-    mediaType: "video",
-    title: "Kamu ketiduran di motor karena capek belajar",
-    caption: "ini ada kali 10 menit di motor gini, baru aku bangunin",
-  },
-  {
-    src: VIDEO_28,
-    mediaType: "video",
-    title: "Kamu ketiduran di motor karena capek belajar",
-    caption: "ini ada kali 10 menit di motor gini, baru aku bangunin",
-  },
-  {
-    src: VIDEO_29,
-    mediaType: "video",
-    title: "Kamu nginep di rumah ku pertama kalinya",
-    caption:
-      "nanti pas apdev kamu nginep lagi yaa sayang, biar ibu punya anak cewe",
-  },
-  {
-    src: VIDEO_30,
-    mediaType: "video",
-    title: "ini otw beli soto bogor yang kata kamu biasa aja",
-    caption: "kamu kepanasan disini sama hawa jakarta",
-  },
-  {
-    src: VIDEO_31,
-    mediaType: "video",
-    title: "kamu disini kebingungan pas naik MRT HEHEHEHE",
-    caption: "lucuu bgt kyk anak ilanggg",
-  },
-  {
-    src: VIDEO_32,
-    mediaType: "video",
-    title: "Sayang kamu kyk anak kecill bgt disini aku sukaaaa",
-    caption:
-      "tolong dong keluarin lagi sifat anak kecil ituuu, pasti aku ladenin",
-  },
-  {
-    src: VIDEO_33,
-    mediaType: "video",
-    title: "Study Date #7",
-    caption: "ini aku tidur dipangkuan kamu",
-  },
-  {
-    src: VIDEO_34,
-    mediaType: "video",
-    title: "I Love You Too Sayangkuuu",
-    caption: "",
-  },
-  {
-    src: VIDEO_35,
-    mediaType: "video",
-    title: "Asik PotoStudio",
-    caption: "banyak bgt ini gayanya seng, ga mati gaya alhamdulillah",
-  },
-  {
-    src: VIDEO_36,
-    mediaType: "video",
-    title: "mengerjakan PR merakit bricks bareng di cotaslice",
-    caption: "",
-  },
-  {
-    src: VIDEO_37,
-    mediaType: "video",
-    title: "Makan Purnama di Sigura2, terimakasih sayang sudah suapin akuuu",
-    caption: "outfit OG kamu itu senggg",
-  },
-  {
-    src: VIDEO_38,
-    mediaType: "video",
-    title: "Yap Cotaslice lagi, kamu tim bolognase, aku tim carbonara",
-    caption: "",
-  },
-  {
-    src: VIDEO_39,
-    mediaType: "video",
-    title: "aku ajarin kamu main game di galaxy gaming",
-    caption: "next  main lagi yuk seng, tapi yg vip dan yg nintendo switch",
-  },
-  {
-    src: VIDEO_40,
-    mediaType: "video",
-    title: "Gala Premier",
-    caption:
-      "Ya allah akhirnya kelar yaaa proker itu, sebagai support system aku bangga sengg",
-  },
-  {
-    src: FOTO_28,
-    title: "AVVV DIKECUP LEHERNYAAA, MAU LAGI SAYANG ADA WATERMARK INI",
-    caption: "UNTUK SAAT INI DI TANGAN DLU AJAAA YAAA SAYANG",
-  },
-  {
-    src: FOTO_29,
-    title: "Foto farewell bem artaaa",
-    caption: "candid cantik ceunah",
-  },
-  {
-    src: FOTO_30,
-    title: "kamu kegedean pake sweater akuu",
-    caption:
-      "tandanya kamu sudah kurus sayang, jgn sakit2 grgr mau kurusss yaaa",
-  },
-  {
-    src: FOTO_31,
-    title: "Art Date dan bertemu danish disniii",
-    caption: "pelarian karena kamu gabisa dateng artro",
-  },
-  {
-    src: FOTO_32,
-    title: "Jogging Date yang berujung jalan kaki mencari jajanan",
-    caption: "cocok bgt cantik dan ganteng, ada tu jogging pegangan tangan",
-  },
-  {
-    src: FOTO_33,
-    title: "YEAYYYYYYYYYYYY FOTO KITA BLURRR",
-    caption: "CANTIKKKK BGT CEUNAH OUTFITNYA JUGA BAGUS SEKALI",
-  },
-  {
-    src: FOTO_34,
-    title: "Masyaallah sayangkuuu cantik bgt, keren kan brush LOVE aku",
-    caption: "",
-  },
-  {
-    src: FOTO_35,
-    title: "WKWKWKWK AQUARIUM DATE, NEXT TIME DI JAKARTAAA YAAA SENG",
-    caption: "",
-  },
-  {
-    src: FOTO_36,
-    title: "Sicantik menemani siganteng MC",
-    caption: "",
-  },
-  {
-    src: FOTO_37,
-    title:
-      "Terimakasih sayang sudah mau support aku untuk MC di debug, DEBUT AKUH",
-    caption:
-      "dan terimakasih yaaa sayangkuuu atas kadonyaa, aku sukaaa bingits",
-  },
-  {
-    src: FOTO_38,
-    title: "Study Date #5",
-    caption: "",
-  },
-  {
-    src: FOTO_39,
-    title: "Berfoto bersama di OH PK2",
-    caption: "matching lagi bajunya sama2 biru",
-  },
-  {
-    src: FOTO_40,
-    title: "Masyaallah sayangku cinta ini kamu cantik bgt",
-    caption: "kamu gamau makan aku aja kah seng?",
-  },
-  {
-    src: FOTO_41,
-    title: "MC RAION, LUVVV BGT DECH BATIK BAWAHNYA, DAN KERUDUNGNYA",
-    caption: "",
-  },
-  {
-    src: FOTO_42,
-    title: "OTW KE RUMAH MERTUAAA",
-    caption: "",
-  },
-  {
-    src: FOTO_43,
-    title: "CISSSS SAYANGKUUU 1 2 3",
-    caption: "CANTING BGT SAYANGKUUU",
-  },
-  {
-    src: FOTO_44,
-    title: "Anjas foto di citylight jakartaaa",
-    caption: "ayooo cintaaaa nanti bermain lagi di jakarta as a couple",
-  },
-  {
-    src: FOTO_45,
-    title:
-      "Ya allah ini yang cantik air terjunnya atau orang disamping aku si sayang",
-    caption: "terimakasih yaaa sayang ssudah mau tukeran sendal dengan sepatu",
-  },
-  {
-    src: FOTO_LOMBA_1,
-    title: "Keluar Kota Karena Lomba #1",
-    caption: "Meskipun NT",
+    caption: "entah aku harus memuja pantainya atau orang inii",
   },
 ];
 
