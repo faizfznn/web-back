@@ -5,14 +5,14 @@ function PoinInti() {
   const [showModal, setShowModal] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
 
-  // Gunakan Formspree untuk notifikasi via Email
+  // Pakai Formspree untuk notifikasi Email
   // const FORMSPREE_ID = "xyeyvvey";
 
-  // Gunakan CallMeBot API untuk mengirim pesan WhatsApp secara diam-diam
-  // 1. Tambahkan nomor +34 693 54 27 68 ke kontak HP Anda (misal nama: CallMeBot)
-  // 2. Kirim pesan WA ke nomor tersebut dengan tulisan: I allow callmebot to send me messages
-  // 3. Bot akan membalas dengan memberikan API Key.
-  // 4. Masukkan nomor Anda (dengan kode negara, contoh 628...) dan API Key ke bawah ini:
+  // Pakai CallMeBot API untuk ngirim pesen WA
+  // 1. Add nomor +34 693 54 27 68 ke kontak HP
+  // 2. Kirim chat WA ke nomor diatas dengan teks: I allow callmebot to send me messages
+  // 3. Bot akan bales dengan ngasi API Key.
+  // 4. Masukin nomor Saya (kode negara, contoh 628...) dan API Key ke bawah ini:
   const WA_PHONE = "YOUR_PHONE_NUMBER"; // contoh: "6287874690756"
   const WA_API_KEY = "YOUR_API_KEY"; // contoh: "123456"
 

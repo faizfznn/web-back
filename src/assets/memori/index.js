@@ -1,5 +1,6 @@
 import VIDEO_1 from "./video-1.mp4";
 import VIDEO_2 from "./video-2.mp4";
+import VIDEO_3 from "./video-3.mp4";
 import VIDEO_4 from "./video-4.mp4";
 import VIDEO_5 from "./video-5.mp4";
 import VIDEO_6 from "./video-6.mp4";
@@ -19,6 +20,24 @@ import VIDEO_19 from "./video-19.mp4";
 import VIDEO_20 from "./video-20.mp4";
 import VIDEO_21 from "./video-21.mp4";
 import VIDEO_22 from "./video-22.mp4";
+import VIDEO_23 from "./video-23.mp4";
+import VIDEO_24 from "./video-24.mp4";
+import VIDEO_25 from "./video-25.mp4";
+import VIDEO_26 from "./video-26.mp4";
+import VIDEO_27 from "./video-27.mp4";
+import VIDEO_28 from "./video-28.mp4";
+import VIDEO_29 from "./video-29.mp4";
+import VIDEO_30 from "./video-30.mp4";
+import VIDEO_31 from "./video-31.mp4";
+import VIDEO_32 from "./video-32.mp4";
+import VIDEO_33 from "./video-33.mp4";
+import VIDEO_34 from "./video-34.mp4";
+import VIDEO_35 from "./video-35.mp4";
+import VIDEO_36 from "./video-36.mp4";
+import VIDEO_37 from "./video-37.mp4";
+import VIDEO_38 from "./video-38.mp4";
+import VIDEO_39 from "./video-39.mp4";
+import VIDEO_40 from "./video-40.mp4";
 import FOTO_1 from "./foto-1.jpg";
 import FOTO_2 from "./foto-2.jpg";
 import FOTO_3 from "./foto-3.JPG";
@@ -41,6 +60,25 @@ import FOTO_23 from "./foto-23.jpg";
 import FOTO_24 from "./foto-24.jpg";
 import FOTO_25 from "./foto-25.jpg";
 import FOTO_26 from "./foto-26.jpg";
+import FOTO_27 from "./foto-27.jpg";
+import FOTO_28 from "./foto-28.jpg";
+import FOTO_29 from "./foto-29.jpg";
+import FOTO_30 from "./foto-30.jpg";
+import FOTO_31 from "./foto-31.jpg";
+import FOTO_32 from "./foto-32.jpg";
+import FOTO_33 from "./foto-33.jpg";
+import FOTO_34 from "./foto-34.jpeg";
+import FOTO_35 from "./foto-35.jpeg";
+import FOTO_36 from "./foto-36.jpeg";
+import FOTO_37 from "./foto-37.jpeg";
+import FOTO_38 from "./foto-38.jpeg";
+import FOTO_39 from "./foto-39.jpeg";
+import FOTO_40 from "./foto-40.jpeg";
+import FOTO_41 from "./foto-41.jpeg";
+import FOTO_42 from "./foto-42.jpeg";
+import FOTO_43 from "./foto-43.jpeg";
+import FOTO_44 from "./foto-44.jpeg";
+import FOTO_45 from "./foto-45.jpeg";
 import FOTO_CANTIK_1 from "./foto-cantik-1.jpg";
 import FOTO_CANTIK_2 from "./foto-cantik-2.jpg";
 import FOTO_CANTIK_3 from "./foto-cantik-3.jpg";
@@ -53,6 +91,14 @@ import FOTO_CANTIK_9 from "./foto-cantik-9.jpg";
 import FOTO_CANTIK_10 from "./foto-cantik-10.jpg";
 import FOTO_CANTIK_11 from "./foto-cantik-11.jpg";
 import FOTO_CANTIK_12 from "./foto-cantik-12.jpg";
+import FOTO_CANTIK_13 from "./foto-cantik-13.jpg";
+import FOTO_CANTIK_14 from "./foto-cantik-14.jpg";
+import FOTO_CANTIK_15 from "./foto-cantik-15.jpeg";
+import FOTO_CANTIK_16 from "./foto-cantik-16.jpeg";
+import FOTO_CANTIK_17 from "./foto-cantik-17.jpeg";
+import FOTO_CANTIK_18 from "./foto-cantik-18.jpeg";
+import FOTO_CANTIK_19 from "./foto-cantik-19.jpeg";
+import FOTO_CANTIK_20 from "./foto-cantik-20.jpeg";
 import FOTO_LOMBA_1 from "./foto-lomba-1.jpg";
 
 const MEMORI_MEDIA = [
@@ -147,6 +193,11 @@ const MEMORI_MEDIA = [
     // flipVideo: false,
     title: "rara suka bayiii",
     caption: "aku suka deh sayang kamu sudah bayiii",
+  },
+  {
+    src: FOTO_27,
+    title: "Pelarian pas kkn ini nnton andai ibu tidak menikah dengan ayah",
+    caption: "kita berdua nangis yaaa sayanggg, dijadiin pelajaran yahh ",
   },
   {
     src: VIDEO_15,
@@ -348,6 +399,255 @@ const MEMORI_MEDIA = [
     src: FOTO_CANTIK_12,
     title: "Masyaallah Sayang Cakep BGT di Farewell PK2 #12",
     // caption: "ya allah cakep bgt ciptaanmu",
+  },
+  {
+    src: FOTO_CANTIK_12,
+    title: "Masyaallah Sayang Cakep BGT di Farewell PK2 #12",
+    // caption: "ya allah cakep bgt ciptaanmu",
+  },
+  {
+    src: FOTO_CANTIK_13,
+    title: "Masyaallah Sayang Cakep BGT #13",
+    // caption: "ya allah cakep bgt ciptaanmu",
+  },
+  {
+    src: FOTO_CANTIK_14,
+    title: "Masyaallah Sayang Cakep BGT #14",
+    // caption: "ya allah cakep bgt ciptaanmu",
+  },
+  {
+    src: FOTO_CANTIK_15,
+    title: "Masyaallah Sayang Cakep BGT #15",
+    // caption: "ya allah cakep bgt ciptaanmu",
+  },
+  {
+    src: FOTO_CANTIK_16,
+    title: "Masyaallah Sayang Cakep BGT #16",
+    // caption: "ya allah cakep bgt ciptaanmu",
+  },
+  {
+    src: FOTO_CANTIK_17,
+    title: "Masyaallah Sayang Cakep BGT #17",
+    // caption: "ya allah cakep bgt ciptaanmu",
+  },
+  {
+    src: FOTO_CANTIK_18,
+    title: "Masyaallah Sayang Cakep BGT #18",
+    // caption: "ya allah cakep bgt ciptaanmu",
+  },
+  {
+    src: FOTO_CANTIK_19,
+    title: "Masyaallah Sayang Cakep BGT #19",
+    // caption: "ya allah cakep bgt ciptaanmu",
+  },
+  {
+    src: FOTO_CANTIK_20,
+    title: "Masyaallah Sayang Cakep BGT 201",
+    // caption: "ya allah cakep bgt ciptaanmu",
+  },
+  {
+    src: VIDEO_3,
+    mediaType: "video",
+    title: "Video Memori #3",
+    caption: "",
+  },
+  {
+    src: VIDEO_23,
+    mediaType: "video",
+    title: "Video Memori #23",
+    caption: "",
+  },
+  {
+    src: VIDEO_24,
+    mediaType: "video",
+    title: "Video Memori #24",
+    caption: "",
+  },
+  {
+    src: VIDEO_25,
+    mediaType: "video",
+    title: "Video Memori #25",
+    caption: "",
+  },
+  {
+    src: VIDEO_26,
+    mediaType: "video",
+    title: "Video Memori #26",
+    caption: "",
+  },
+  {
+    src: VIDEO_27,
+    mediaType: "video",
+    title: "Video Memori #27",
+    caption: "",
+  },
+  {
+    src: VIDEO_28,
+    mediaType: "video",
+    title: "Video Memori #28",
+    caption: "",
+  },
+  {
+    src: VIDEO_29,
+    mediaType: "video",
+    title: "Video Memori #29",
+    caption: "",
+  },
+  {
+    src: VIDEO_30,
+    mediaType: "video",
+    title: "Video Memori #30",
+    caption: "",
+  },
+  {
+    src: VIDEO_31,
+    mediaType: "video",
+    title: "Video Memori #31",
+    caption: "",
+  },
+  {
+    src: VIDEO_32,
+    mediaType: "video",
+    title: "Video Memori #32",
+    caption: "",
+  },
+  {
+    src: VIDEO_33,
+    mediaType: "video",
+    title: "Video Memori #33",
+    caption: "",
+  },
+  {
+    src: VIDEO_34,
+    mediaType: "video",
+    title: "Video Memori #34",
+    caption: "",
+  },
+  {
+    src: VIDEO_35,
+    mediaType: "video",
+    title: "Video Memori #35",
+    caption: "",
+  },
+  {
+    src: VIDEO_36,
+    mediaType: "video",
+    title: "Video Memori #36",
+    caption: "",
+  },
+  {
+    src: VIDEO_37,
+    mediaType: "video",
+    title: "Video Memori #37",
+    caption: "",
+  },
+  {
+    src: VIDEO_38,
+    mediaType: "video",
+    title: "Video Memori #38",
+    caption: "",
+  },
+  {
+    src: VIDEO_39,
+    mediaType: "video",
+    title: "Video Memori #39",
+    caption: "",
+  },
+  {
+    src: VIDEO_40,
+    mediaType: "video",
+    title: "Video Memori #40",
+    caption: "",
+  },
+  {
+    src: FOTO_28,
+    title: "Foto Memori #28",
+    caption: "",
+  },
+  {
+    src: FOTO_29,
+    title: "Foto Memori #29",
+    caption: "",
+  },
+  {
+    src: FOTO_30,
+    title: "Foto Memori #30",
+    caption: "",
+  },
+  {
+    src: FOTO_31,
+    title: "Foto Memori #31",
+    caption: "",
+  },
+  {
+    src: FOTO_32,
+    title: "Foto Memori #32",
+    caption: "",
+  },
+  {
+    src: FOTO_33,
+    title: "Foto Memori #33",
+    caption: "",
+  },
+  {
+    src: FOTO_34,
+    title: "Foto Memori #34",
+    caption: "",
+  },
+  {
+    src: FOTO_35,
+    title: "Foto Memori #35",
+    caption: "",
+  },
+  {
+    src: FOTO_36,
+    title: "Foto Memori #36",
+    caption: "",
+  },
+  {
+    src: FOTO_37,
+    title: "Foto Memori #37",
+    caption: "",
+  },
+  {
+    src: FOTO_38,
+    title: "Foto Memori #38",
+    caption: "",
+  },
+  {
+    src: FOTO_39,
+    title: "Foto Memori #39",
+    caption: "",
+  },
+  {
+    src: FOTO_40,
+    title: "Foto Memori #40",
+    caption: "",
+  },
+  {
+    src: FOTO_41,
+    title: "Foto Memori #41",
+    caption: "",
+  },
+  {
+    src: FOTO_42,
+    title: "Foto Memori #42",
+    caption: "",
+  },
+  {
+    src: FOTO_43,
+    title: "Foto Memori #43",
+    caption: "",
+  },
+  {
+    src: FOTO_44,
+    title: "Foto Memori #44",
+    caption: "",
+  },
+  {
+    src: FOTO_45,
+    title: "Foto Memori #45",
+    caption: "",
   },
   {
     src: FOTO_LOMBA_1,
