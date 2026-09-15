@@ -145,7 +145,7 @@ function Navbar() {
         </div>
 
         <a
-          href="clips.id/effort"
+          href="http://clips.id/effort"
           target="_blank"
           rel="noopener noreferrer"
           style={{
