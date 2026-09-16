@@ -6,7 +6,7 @@ function PoinInti() {
   const [modalMessage, setModalMessage] = useState("");
 
   // Pakai Formspree untuk notifikasi Email
-  // const FORMSPREE_ID = "xyeyvvey";
+  const FORMSPREE_ID = "xyeyvvey";
 
   // Pakai CallMeBot API untuk ngirim pesen WA
   // 1. Add nomor +34 693 54 27 68 ke kontak HP
