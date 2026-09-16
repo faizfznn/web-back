@@ -46,7 +46,21 @@ function JurnalDetail() {
         to="/jurnal"
         className="mb-10 inline-flex items-center gap-2 text-sm font-bold text-[#6C40E5] transition-transform hover:-translate-x-1"
       >
-        <span aria-hidden="true">←</span> Kembali ke jurnal
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="transition-transform duration-300 group-hover:-translate-x-1"
+        >
+          <path d="m15 18-6-6 6-6" />{" "}
+        </svg>{" "}
+        Kembali ke jurnal
       </Link>
 
       {!isSupabaseConfigured && (
