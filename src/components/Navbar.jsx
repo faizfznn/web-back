@@ -44,8 +44,7 @@ function Navbar() {
         className="
       flex
       w-full max-w-[875px]
-      flex-wrap gap-x-2 gap-y-1 px-3 py-2 md:flex-nowrap md:gap-0 md:px-[12px] md:py-[8px]
-      justify-between
+      flex-wrap gap-x-2 gap-y-1 px-3 py-2 md:grid md:grid-cols-[1fr_auto_1fr] md:gap-0 md:px-[12px] md:py-[8px]
       items-center
       rounded-[16px] md:rounded-[20px]
       border-[0.901px]
@@ -67,7 +66,7 @@ function Navbar() {
           aria-label={isMenuOpen ? "Tutup menu" : "Buka menu"}
           aria-expanded={isMenuOpen}
           onClick={() => setIsMenuOpen((isOpen) => !isOpen)}
-          className="flex h-10 w-10 items-center justify-center rounded-xl text-[#4B2CA7] hover:bg-[#F4F0FF] md:hidden"
+          className="order-2 ml-auto flex h-10 w-10 items-center justify-center rounded-xl text-[#4B2CA7] hover:bg-[#F4F0FF] md:order-none md:hidden"
         >
           <svg
             viewBox="0 0 24 24"
@@ -85,7 +84,7 @@ function Navbar() {
         </button>
 
         {/* Center Nav */}
-        <div className="order-3 hidden basis-full items-center justify-center gap-0.5 border-t border-[#F0EDF5] pt-1.5 md:order-none md:flex md:basis-auto md:gap-1 md:border-0 md:pt-0">
+        <div className="order-3 hidden basis-full items-center justify-center gap-0.5 border-t border-[#F0EDF5] pt-1.5 md:order-none md:flex md:basis-auto md:gap-1 md:border-0 md:pt-0 md:justify-self-center">
           {/* Point Inti */}
           <button
             onClick={() => goTo("/poin-inti")}
@@ -195,7 +194,7 @@ function Navbar() {
           className="
     group
             order-2 hidden
-            px-2 py-1.5 text-[11px] md:order-none md:px-[16px] md:py-[12px] md:text-[16px]
+            px-2 py-1.5 text-[11px] md:order-none md:flex md:justify-self-end md:px-[16px] md:py-[12px] md:text-[16px]
     justify-center
     items-center
     gap-1 md:gap-[12.732px]
