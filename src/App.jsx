@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import MusicPlayer from "./components/MusicPlayer";
+import Footer from "./components/Footer";
 import PoinInti from "./pages/PoinInti";
 import Memori from "./pages/Memori";
 import Jurnal from "./pages/Jurnal";
@@ -29,6 +30,7 @@ function App() {
             <Route path="/admin/jurnal" element={<AdminJurnal />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </Router>
   );
