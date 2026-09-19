@@ -1,5 +1,26 @@
 import { supabase } from "./supabase";
 
+export async function uploadJournalImage(file) {
+  if (!supabase) {
+    return { data: null, error: new Error("Supabase belum dikonfigurasi.") };
+  }
+
+  const extension = file.name.split(".").pop()?.toLowerCase() || "jpg";
+  const fileId = crypto.randomUUID?.() || `${Date.now()}-${Math.random()}`;
+  const filePath = `${fileId}.${extension}`;
+  const { error: uploadError } = await supabase.storage
+    .from("journal-images")
+    .upload(filePath, file, { contentType: file.type, upsert: false });
+
+  if (uploadError) return { data: null, error: uploadError };
+
+  const { data } = supabase.storage
+    .from("journal-images")
+    .getPublicUrl(filePath);
+
+  return { data: { publicUrl: data.publicUrl }, error: null };
+}
+
 export async function getPublicJournals() {
   if (!supabase) {
     return { data: [], error: new Error("Supabase belum dikonfigurasi.") };

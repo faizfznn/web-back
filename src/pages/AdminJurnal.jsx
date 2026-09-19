@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
-import { deleteJournal, getAdminJournals, saveJournal } from "../lib/journals";
+import {
+  deleteJournal,
+  getAdminJournals,
+  saveJournal,
+  uploadJournalImage,
+} from "../lib/journals";
 import { isSupabaseConfigured, supabase } from "../lib/supabase";
 
 const emptyJournal = {
@@ -19,6 +24,7 @@ function AdminJurnal() {
   const [journals, setJournals] = useState([]);
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const [uploadingImage, setUploadingImage] = useState(false);
 
   useEffect(() => {
     if (!supabase) return undefined;
@@ -68,6 +74,30 @@ function AdminJurnal() {
     const { error } = await deleteJournal(id);
     setMessage(error?.message || "Jurnal dihapus.");
     if (!error) await loadJournals();
+  }
+
+  async function handleImageUpload(file) {
+    if (!file) return;
+    if (!file.type.startsWith("image/")) {
+      setMessage("File harus berupa gambar.");
+      return;
+    }
+    if (file.size > 5 * 1024 * 1024) {
+      setMessage("Ukuran gambar maksimal 5 MB.");
+      return;
+    }
+
+    setUploadingImage(true);
+    setMessage("");
+    try {
+      const { data, error } = await uploadJournalImage(file);
+      if (error) setMessage(error.message);
+      else setJournal((current) => ({ ...current, image_url: data.publicUrl }));
+    } catch (error) {
+      setMessage(error.message || "Upload gambar gagal.");
+    } finally {
+      setUploadingImage(false);
+    }
   }
 
   if (!isSupabaseConfigured) {
@@ -169,14 +199,48 @@ function AdminJurnal() {
             rows="8"
             className="resize-y rounded-xl border border-[#DDD] px-4 py-3 outline-none focus:border-[#6C40E5]"
           />
-          <input
-            value={journal.image_url}
-            onChange={(event) =>
-              setJournal({ ...journal, image_url: event.target.value })
-            }
-            placeholder="URL gambar (opsional)"
-            className="rounded-xl border border-[#DDD] px-4 py-3 outline-none focus:border-[#6C40E5]"
-          />
+          <div className="grid gap-3">
+            <input
+              value={journal.image_url}
+              onChange={(event) =>
+                setJournal({ ...journal, image_url: event.target.value })
+              }
+              placeholder="URL gambar (opsional)"
+              className="rounded-xl border border-[#DDD] px-4 py-3 outline-none focus:border-[#6C40E5]"
+            />
+            <label
+              onDragOver={(event) => event.preventDefault()}
+              onDrop={(event) => {
+                event.preventDefault();
+                handleImageUpload(event.dataTransfer.files[0]);
+              }}
+              className="flex cursor-pointer flex-col items-center justify-center rounded-xl border border-dashed border-[#CFC7E8] bg-[#FAF9FF] px-4 py-5 text-center text-sm text-[#666] transition hover:border-[#6C40E5]"
+            >
+              <span className="font-semibold text-[#4D32A8]">
+                {uploadingImage ? "Mengunggah gambar..." : "Upload gambar"}
+              </span>
+              <span className="mt-1 text-xs">
+                Klik untuk memilih atau drop gambar di sini (maks. 5 MB)
+              </span>
+              <input
+                type="file"
+                accept="image/*"
+                disabled={uploadingImage}
+                onChange={(event) => {
+                  handleImageUpload(event.target.files[0]);
+                  event.target.value = "";
+                }}
+                className="sr-only"
+              />
+            </label>
+            {journal.image_url && (
+              <img
+                src={journal.image_url}
+                alt="Pratinjau gambar jurnal"
+                className="h-40 w-full rounded-xl object-cover"
+              />
+            )}
+          </div>
           <label className="flex items-center gap-3 text-sm text-[#555]">
             <input
               type="checkbox"
@@ -189,7 +253,7 @@ function AdminJurnal() {
             Tampilkan untuk Rara / publik
           </label>
           <button
-            disabled={loading}
+            disabled={loading || uploadingImage}
             className="mt-2 rounded-xl bg-[#6C40E5] px-4 py-3 font-bold text-white disabled:opacity-60"
           >
             {loading

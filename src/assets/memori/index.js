@@ -40,6 +40,7 @@ import VIDEO_39 from "./video-39.mp4";
 import VIDEO_40 from "./video-40.mp4";
 import VIDEO_41 from "./video-41.mp4";
 import VIDEO_42 from "./video-42.mp4";
+import VIDEO_43 from "./video-43.mp4";
 import FOTO_1 from "./foto-1.jpg";
 import FOTO_2 from "./foto-2.jpg";
 import FOTO_3 from "./foto-3.JPG";
@@ -84,6 +85,11 @@ import FOTO_45 from "./foto-45.jpeg";
 import FOTO_46 from "./foto-46.jpeg";
 import FOTO_47 from "./foto-47.jpeg";
 import FOTO_48 from "./foto-48.jpeg";
+import FOTO_49 from "./foto-49.jpeg";
+import FOTO_50 from "./foto-50.jpg";
+import FOTO_51 from "./foto-51.jpeg";
+import FOTO_52 from "./foto-52.jpeg";
+import FOTO_53 from "./foto-53.jpeg";
 import FOTO_CANTIK_1 from "./foto-cantik-1.jpg";
 import FOTO_CANTIK_2 from "./foto-cantik-2.jpg";
 import FOTO_CANTIK_3 from "./foto-cantik-3.jpg";
@@ -471,47 +477,6 @@ const MEMORI_MEDIA = [
     caption: "ALHAMDULILLAH UKURANNYA COCOK, aku jadi pendamping kamu",
   },
   {
-    src: VIDEO_1,
-    mediaType: "video",
-    title: "Merayakan Ultah Aku",
-    caption: "Aku di prank",
-  },
-  {
-    src: VIDEO_14,
-    mediaType: "video",
-    title: "Merayakan Ultah Aku",
-    caption: "Aku di prank",
-  },
-  {
-    src: FOTO_19,
-    title: "Jenguk kamu sehabis interview Apdev",
-    caption: "kamu disini cakep bgt make up dan outfitnya",
-  },
-  {
-    src: FOTO_20,
-    title: "Lanjut main ice skating",
-    caption: "nanti main lagi yaa sayang sampai jago",
-  },
-  {
-    src: FOTO_21,
-    title: "Sayang cakep bangett siii",
-    caption: "ya allah cakep bgt ciptaanmu",
-  },
-  {
-    src: VIDEO_23,
-    mediaType: "video",
-    title: "HAHAHAHAH SAYANG LUCU SEKALII KAMU MAIN ICE SKATING",
-    caption:
-      "nanti latihan lagi yaa sayang, biar bisa main ice skating lebih lancar",
-  },
-  {
-    src: VIDEO_24,
-    mediaType: "video",
-    title: "SAYANG KALO MAU JATOH MEGANG DENGKUL",
-    caption:
-      "nanti latihan lagi yaa sayang, biar bisa main ice skating lebih lancar",
-  },
-  {
     src: VIDEO_27,
     mediaType: "video",
     title: "Kamu ketiduran di motor karena capek belajar",
@@ -573,6 +538,83 @@ const MEMORI_MEDIA = [
     title: "Sayang kamu kyk anak kecill bgt disini aku sukaaaa",
     caption:
       "tolong dong keluarin lagi sifat anak kecil ituuu, pasti aku ladenin",
+  },
+  {
+    src: VIDEO_1,
+    mediaType: "video",
+    title: "Merayakan Ultah Aku",
+    caption: "Aku di prank",
+  },
+  {
+    src: VIDEO_14,
+    mediaType: "video",
+    title: "Merayakan Ultah Aku",
+    caption: "Aku di prank",
+  },
+  {
+    src: FOTO_19,
+    title: "Jenguk kamu sehabis interview Apdev",
+    caption: "kamu disini cakep bgt make up dan outfitnya",
+  },
+  {
+    src: FOTO_20,
+    title: "Lanjut main ice skating",
+    caption: "nanti main lagi yaa sayang sampai jago",
+  },
+  {
+    src: FOTO_21,
+    title: "Sayang cakep bangett siii",
+    caption: "ya allah cakep bgt ciptaanmu",
+  },
+  {
+    src: VIDEO_23,
+    mediaType: "video",
+    title: "HAHAHAHAH SAYANG LUCU SEKALII KAMU MAIN ICE SKATING",
+    caption:
+      "nanti latihan lagi yaa sayang, biar bisa main ice skating lebih lancar",
+  },
+  {
+    src: VIDEO_24,
+    mediaType: "video",
+    title: "SAYANG KALO MAU JATOH MEGANG DENGKUL",
+    caption:
+      "nanti latihan lagi yaa sayang, biar bisa main ice skating lebih lancar",
+  },
+  {
+    src: FOTO_49,
+    title: "Foto ini lucu bangettt",
+    caption: "Hai sayang, terimakasih ya masih mau foto sama aku",
+  },
+  {
+    src: FOTO_50,
+    title: "Foto ini lucu bangettt",
+    caption: "Hai sayang, terimakasih ya masih mau foto sama aku",
+  },
+  {
+    src: FOTO_51,
+    title:
+      "Kamu disini cantik bgt sayang, mirip shadira, mirip istri aku dimasa depan",
+    caption:
+      "terimakasih yaa sayang kamu sudah ceria pas keluar sama aku, dirawat bunganya dengan baik, sampai mati",
+  },
+  {
+    src: VIDEO_43,
+    mediaType: "video",
+    title: "Bermain PS #2",
+    caption:
+      "Terimakasih sayang sudah happy di hari kamu SEMPRO, Maaf aku ceroboh numpahin air ke makanan kamu, dan juga maaf malah bikin kamu tambah cape main nintendo",
+  },
+  {
+    src: FOTO_52,
+    title: "Cantik bgt meletnyaaa",
+    caption:
+      "terimakasih yaa sayang kamu sudah ceria pas keluar sama aku, dirawat bunganya dengan baik, sampai mati",
+  },
+  {
+    src: FOTO_53,
+    title: "HIHIHI GEDEAN BUNGANYA DARIPADA KAMUNYA",
+    caption:
+      "terimakasih yaa sayang kamu sudah ceria pas keluar sama aku, dirawat bunganya dengan baik, sampai mati",
   },
   {
     src: VIDEO_4,

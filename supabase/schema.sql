@@ -8,24 +8,43 @@ create table if not exists public.journals (
   created_at timestamptz not null default now()
 );
 
+insert into storage.buckets (id, name, public)
+values ('journal-images', 'journal-images', true)
+on conflict (id) do update set public = true;
+
+drop policy if exists "Anyone can view journal images" on storage.objects;
+create policy "Anyone can view journal images"
+  on storage.objects for select
+  using (bucket_id = 'journal-images');
+
+drop policy if exists "Authenticated admins can upload journal images" on storage.objects;
+create policy "Authenticated admins can upload journal images"
+  on storage.objects for insert to authenticated
+  with check (bucket_id = 'journal-images');
+
 alter table public.journals enable row level security;
 
+drop policy if exists "Anyone can read public journals" on public.journals;
 create policy "Anyone can read public journals"
   on public.journals for select
   using (is_public = true);
 
+drop policy if exists "Authenticated admins can read all journals" on public.journals;
 create policy "Authenticated admins can read all journals"
   on public.journals for select to authenticated
   using (true);
 
+drop policy if exists "Authenticated admins can insert journals" on public.journals;
 create policy "Authenticated admins can insert journals"
   on public.journals for insert to authenticated
   with check (true);
 
+drop policy if exists "Authenticated admins can update journals" on public.journals;
 create policy "Authenticated admins can update journals"
   on public.journals for update to authenticated
   using (true) with check (true);
 
+drop policy if exists "Authenticated admins can delete journals" on public.journals;
 create policy "Authenticated admins can delete journals"
   on public.journals for delete to authenticated
   using (true);
