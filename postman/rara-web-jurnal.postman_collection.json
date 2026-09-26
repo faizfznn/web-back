@@ -1,0 +1,171 @@
+{
+  "info": {
+    "name": "Rara Web - Jurnal API",
+    "description": "Dokumentasi API Postman untuk fitur jurnal website Rara Web yang memakai Supabase. Collection ini mengacu pada file schema.sql dan logic di src/lib/journals.js.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "rara-web-jurnal-api-2026"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://<project-ref>.supabase.co",
+      "type": "string"
+    },
+    {
+      "key": "anonKey",
+      "value": "<VITE_SUPABASE_ANON_KEY>",
+      "type": "string"
+    },
+    {
+      "key": "accessToken",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "email",
+      "value": "admin@example.com",
+      "type": "string"
+    },
+    {
+      "key": "password",
+      "value": "your-admin-password",
+      "type": "string"
+    },
+    {
+      "key": "journalId",
+      "value": "3",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Auth - Login Admin",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const json = pm.response.json();",
+              "if (json.access_token) {",
+              "  pm.collectionVariables.set('accessToken', json.access_token);",
+              "}",
+              "pm.test('Status code is 200', function () {",
+              "  pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "apikey", "value": "{{anonKey}}" },
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Accept", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"{{email}}\",\n  \"password\": \"{{password}}\"\n}"
+        },
+        "url": "{{baseUrl}}/auth/v1/token?grant_type=password",
+        "description": "Login admin menggunakan Supabase Auth. Respons akan berisi access_token yang dipakai untuk semua request admin di endpoint journaling."
+      },
+      "response": []
+    },
+    {
+      "name": "Public - List Journal",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "apikey", "value": "{{anonKey}}" },
+          { "key": "Accept", "value": "application/json" }
+        ],
+        "url": "{{baseUrl}}/rest/v1/journals?select=id,title,content,image_url,published_at,created_at&is_public=eq.true&order=published_at.desc,created_at.desc",
+        "description": "Mengambil semua jurnal yang statusnya public. Endpoint ini sesuai fungsi getPublicJournals()."
+      },
+      "response": []
+    },
+    {
+      "name": "Public - Detail Journal",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "apikey", "value": "{{anonKey}}" },
+          { "key": "Accept", "value": "application/json" }
+        ],
+        "url": "{{baseUrl}}/rest/v1/journals?id=eq.1&select=id,title,content,image_url,published_at,created_at&is_public=eq.true",
+        "description": "Mengambil detail satu jurnal public berdasarkan id. Endpoint ini sesuai fungsi getPublicJournal(id)."
+      },
+      "response": []
+    },
+    {
+      "name": "Admin - List All Journals",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "apikey", "value": "{{anonKey}}" },
+          { "key": "Authorization", "value": "Bearer {{accessToken}}" },
+          { "key": "Accept", "value": "application/json" }
+        ],
+        "url": "{{baseUrl}}/rest/v1/journals?select=*&order=created_at.desc",
+        "description": "Memuat semua jurnal untuk admin, termasuk draft yang belum dipublikasikan. Sesuai fungsi getAdminJournals()."
+      },
+      "response": []
+    },
+    {
+      "name": "Admin - Create Journal",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "apikey", "value": "{{anonKey}}" },
+          { "key": "Authorization", "value": "Bearer {{accessToken}}" },
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Accept", "value": "application/json" },
+          { "key": "Prefer", "value": "return=representation" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Judul jurnal baru\",\n  \"content\": \"Isi konten jurnal di sini...\",\n  \"image_url\": \"https://example.com/image.jpg\",\n  \"is_public\": true,\n  \"published_at\": \"2026-09-16T12:00:00.000Z\"\n}"
+        },
+        "url": "{{baseUrl}}/rest/v1/journals",
+        "description": "Membuat jurnal baru untuk admin. Jika is_public=true, jurnal ini akan tampil di halaman publik."
+      },
+      "response": []
+    },
+    {
+      "name": "Admin - Update Journal",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          { "key": "apikey", "value": "{{anonKey}}" },
+          { "key": "Authorization", "value": "Bearer {{accessToken}}" },
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Accept", "value": "application/json" },
+          { "key": "Prefer", "value": "return=representation" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Judul yang diperbarui\",\n  \"content\": \"Konten yang sudah diubah\",\n  \"image_url\": \"https://example.com/updated.jpg\",\n  \"is_public\": false,\n  \"published_at\": null\n}"
+        },
+        "url": "{{baseUrl}}/rest/v1/journals?id=eq.{{journalId}}",
+        "description": "Memperbarui jurnal tertentu berdasarkan id. Sesuai fungsi saveJournal() saat journal.id ada."
+      },
+      "response": []
+    },
+    {
+      "name": "Admin - Delete Journal",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          { "key": "apikey", "value": "{{anonKey}}" },
+          { "key": "Authorization", "value": "Bearer {{accessToken}}" },
+          { "key": "Accept", "value": "application/json" }
+        ],
+        "url": "{{baseUrl}}/rest/v1/journals?id=eq.1",
+        "description": "Menghapus jurnal berdasarkan id. Sesuai fungsi deleteJournal(id)."
+      },
+      "response": []
+    }
+  ]
+}

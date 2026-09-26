@@ -41,6 +41,9 @@ import VIDEO_40 from "./video-40.mp4";
 import VIDEO_41 from "./video-41.mp4";
 import VIDEO_42 from "./video-42.mp4";
 import VIDEO_43 from "./video-43.mp4";
+import VIDEO_44 from "./video-44.mp4";
+import VIDEO_45 from "./video-45.mp4";
+import VIDEO_46 from "./video-46.mp4";
 import FOTO_1 from "./foto-1.jpg";
 import FOTO_2 from "./foto-2.jpg";
 import FOTO_3 from "./foto-3.JPG";
@@ -90,6 +93,9 @@ import FOTO_50 from "./foto-50.jpg";
 import FOTO_51 from "./foto-51.jpeg";
 import FOTO_52 from "./foto-52.jpeg";
 import FOTO_53 from "./foto-53.jpeg";
+import FOTO_54 from "./foto-54.jpeg";
+import FOTO_55 from "./foto-55.jpeg";
+import FOTO_56 from "./foto-56.jpeg";
 import FOTO_CANTIK_1 from "./foto-cantik-1.jpg";
 import FOTO_CANTIK_2 from "./foto-cantik-2.jpg";
 import FOTO_CANTIK_3 from "./foto-cantik-3.jpg";
@@ -615,6 +621,42 @@ const MEMORI_MEDIA = [
     title: "HIHIHI GEDEAN BUNGANYA DARIPADA KAMUNYA",
     caption:
       "terimakasih yaa sayang kamu sudah ceria pas keluar sama aku, dirawat bunganya dengan baik, sampai mati",
+  },
+  {
+    src: FOTO_54,
+    title: "Terimakasih Sayang Cookiesnya After Sempro",
+    caption:
+      "Aku happy sayang kamu mau keluar jadinya di waktu itu, dan aku jg happy aku boleh touchy ke kamu, padahal km bilnga engga dlu kalo mau manja",
+  },
+  {
+    src: FOTO_55,
+    title: "PERCUMA KAMU NGUMPET TTP KENA DIKAMERA",
+    // caption:
+    //   "terimakasih yaa sayang kamu sudah ceria pas keluar sama aku, dirawat bunganya dengan baik, sampai mati",
+  },
+  {
+    src: VIDEO_44,
+    mediaType: "video",
+    title: "FROM THIS",
+    caption: "SEMANGAT MEMBAWA MOTOR AKU DAN MAM BELUT",
+  },
+  {
+    src: VIDEO_45,
+    mediaType: "video",
+    title: "TO THIS",
+    caption: "LEMAS DAN TIDUR DI OMAH DATOK SETELAH MAM BELUT",
+  },
+  {
+    src: FOTO_56,
+    title: "CANTIK SEKALI KAMU SAYANG",
+    // caption:
+    //   "terimakasih yaa sayang kamu sudah ceria pas keluar sama aku, dirawat bunganya dengan baik, sampai mati",
+  },
+  {
+    src: VIDEO_46,
+    mediaType: "video",
+    title: "Faiz mam, Fira Tidur",
+    caption: "IHIY aku senang kamu mau minta di elus2 kepalanya",
   },
   {
     src: VIDEO_4,

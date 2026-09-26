@@ -6,8 +6,9 @@ Fitur jurnal tersedia di `/jurnal`. Halaman admin tersedia di `/admin/jurnal` da
 
 1. Buat project Supabase, lalu jalankan isi `supabase/schema.sql` di SQL Editor.
 2. Buat satu user admin di Supabase Authentication > Users.
-3. Salin `.env.example` menjadi `.env.local`, lalu isi `VITE_SUPABASE_URL` dan `VITE_SUPABASE_ANON_KEY` dari project Supabase.
-4. Jalankan `npm run dev`, buka `/admin/jurnal`, lalu masuk memakai user tersebut.
+3. Jalankan isi `supabase/schema.sql` untuk membuat tabel jurnal dan bucket gambar `journal-images`.
+4. Salin `.env.example` menjadi `.env.local`, lalu isi `VITE_SUPABASE_URL` dan `VITE_SUPABASE_ANON_KEY` dari project Supabase.
+5. Jalankan `npm run dev`, buka `/admin/jurnal`, lalu masuk memakai user tersebut.
 
 Jurnal hanya tampil di `/jurnal` jika checkbox `Tampilkan untuk Rara / publik` aktif. Row Level Security di schema juga memastikan pengunjung anonim hanya dapat membaca jurnal public.
 
