@@ -291,7 +291,8 @@ function Navbar() {
             <p className="mt-3 text-sm leading-relaxed text-gray-600">
               Isinya kumpulan memori kita dari awal sampai sekarang, termasuk
               foto dan video. Pastikan koneksi internetmu cukup stabil sebelum
-              melanjutkan.
+              melanjutkan. Dan juga untuk pengalaman lebih baik gunakan
+              ipad/laptop
             </p>
             <div className="mt-6 flex gap-3">
               <button
