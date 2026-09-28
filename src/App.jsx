@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import MusicPlayer from "./components/MusicPlayer";
 import Footer from "./components/Footer";
 import PoinInti from "./pages/PoinInti";
+import Momen from "./pages/Momen";
 import Memori from "./pages/Memori";
 import Jurnal from "./pages/Jurnal";
 import JurnalDetail from "./pages/JurnalDetail";
@@ -24,6 +25,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Navigate to="/poin-inti" replace />} />
             <Route path="/poin-inti" element={<PoinInti />} />
+            <Route path="/momen" element={<Momen />} />
             <Route path="/memori" element={<Memori />} />
             <Route path="/jurnal" element={<Jurnal />} />
             <Route path="/jurnal/:id" element={<JurnalDetail />} />

@@ -128,6 +128,49 @@ function Navbar() {
             Poin Inti
           </button>
 
+          {/* Momen */}
+          <button
+            onClick={() => goTo("/momen")}
+            style={
+              currentPage === "/momen"
+                ? {
+                    background:
+                      "radial-gradient(44.33% 44.33% at 50.2% 0%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%), #6C40E5",
+                  }
+                : undefined
+            }
+            className={`
+      flex justify-center items-center
+      text-center
+      font-['Satoshi']
+      text-[12px] md:text-[14.408px]
+      not-italic
+      font-medium
+      leading-normal
+      tracking-[-0.432px]
+      transition-all duration-300
+
+      ${
+        currentPage === "/momen"
+          ? `
+            px-3 md:px-[16px] py-1.5 md:py-[8px]
+            gap-1 md:gap-[12.732px]
+            rounded-[12px]
+            text-[#F5F5F5]
+            shadow-[0_185px_52px_0_rgba(62,24,197,0),0_119px_47px_0_rgba(62,24,197,0.03),0_67px_40px_0_rgba(62,24,197,0.10),0_30px_30px_0_rgba(62,24,197,0.17),0_7px_16px_0_rgba(62,24,197,0.20)]
+          `
+          : `
+            px-2 md:px-[6px] py-1 md:py-[4px]
+            gap-[10px]
+            text-[#505050]
+            hover:text-[#303030]
+          `
+      }
+    `}
+          >
+            Momen
+          </button>
+
           {/* Memori */}
           <button
             onClick={openMemori}
@@ -238,6 +281,13 @@ function Navbar() {
               className={`block w-full rounded-xl px-4 py-3 text-left font-['Satoshi'] text-sm font-medium ${currentPage === "/poin-inti" || currentPage === "/" ? "bg-[#F1ECFF] text-[#6C40E5]" : "text-[#505050]"}`}
             >
               Poin Inti
+            </button>
+            <button
+              type="button"
+              onClick={() => goTo("/momen")}
+              className={`block w-full rounded-xl px-4 py-3 text-left font-['Satoshi'] text-sm font-medium ${currentPage === "/momen" ? "bg-[#F1ECFF] text-[#6C40E5]" : "text-[#505050]"}`}
+            >
+              Momen
             </button>
             <button
               type="button"
