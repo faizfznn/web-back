@@ -13,6 +13,7 @@ import Memori from "./pages/Memori";
 import Jurnal from "./pages/Jurnal";
 import JurnalDetail from "./pages/JurnalDetail";
 import AdminJurnal from "./pages/AdminJurnal";
+import Agenda from "./pages/Agenda";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path="/jurnal" element={<Jurnal />} />
             <Route path="/jurnal/:id" element={<JurnalDetail />} />
             <Route path="/admin/jurnal" element={<AdminJurnal />} />
+            <Route path="/agenda" element={<Agenda />} />
           </Routes>
         </main>
         <Footer />

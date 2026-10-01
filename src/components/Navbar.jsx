@@ -91,9 +91,9 @@ function Navbar() {
             style={
               currentPage === "/poin-inti" || currentPage === "/"
                 ? {
-                    background:
-                      "radial-gradient(44.33% 44.33% at 50.2% 0%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%), #6C40E5",
-                  }
+                  background:
+                    "radial-gradient(44.33% 44.33% at 50.2% 0%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%), #6C40E5",
+                }
                 : undefined
             }
             className={`
@@ -107,22 +107,21 @@ function Navbar() {
       tracking-[-0.432px]
       transition-all duration-300
 
-      ${
-        currentPage === "/poin-inti" || currentPage === "/"
-          ? `
+      ${currentPage === "/poin-inti" || currentPage === "/"
+                ? `
             px-3 md:px-[16px] py-1.5 md:py-[8px]
             gap-1 md:gap-[12.732px]
             rounded-[12px]
             text-[#F5F5F5]
             shadow-[0_185px_52px_0_rgba(62,24,197,0),0_119px_47px_0_rgba(62,24,197,0.03),0_67px_40px_0_rgba(62,24,197,0.10),0_30px_30px_0_rgba(62,24,197,0.17),0_7px_16px_0_rgba(62,24,197,0.20)]
           `
-          : `
+                : `
             px-2 md:px-[6px] py-1 md:py-[4px]
             gap-[10px]
             text-[#505050]
             hover:text-[#303030]
           `
-      }
+              }
     `}
           >
             Poin Inti
@@ -134,9 +133,9 @@ function Navbar() {
             style={
               currentPage === "/momen"
                 ? {
-                    background:
-                      "radial-gradient(44.33% 44.33% at 50.2% 0%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%), #6C40E5",
-                  }
+                  background:
+                    "radial-gradient(44.33% 44.33% at 50.2% 0%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%), #6C40E5",
+                }
                 : undefined
             }
             className={`
@@ -150,22 +149,21 @@ function Navbar() {
       tracking-[-0.432px]
       transition-all duration-300
 
-      ${
-        currentPage === "/momen"
-          ? `
+      ${currentPage === "/momen"
+                ? `
             px-3 md:px-[16px] py-1.5 md:py-[8px]
             gap-1 md:gap-[12.732px]
             rounded-[12px]
             text-[#F5F5F5]
             shadow-[0_185px_52px_0_rgba(62,24,197,0),0_119px_47px_0_rgba(62,24,197,0.03),0_67px_40px_0_rgba(62,24,197,0.10),0_30px_30px_0_rgba(62,24,197,0.17),0_7px_16px_0_rgba(62,24,197,0.20)]
           `
-          : `
+                : `
             px-2 md:px-[6px] py-1 md:py-[4px]
             gap-[10px]
             text-[#505050]
             hover:text-[#303030]
           `
-      }
+              }
     `}
           >
             Momen
@@ -177,9 +175,9 @@ function Navbar() {
             style={
               currentPage === "/memori"
                 ? {
-                    background:
-                      "radial-gradient(44.33% 44.33% at 50.2% 0%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%), #6C40E5",
-                  }
+                  background:
+                    "radial-gradient(44.33% 44.33% at 50.2% 0%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%), #6C40E5",
+                }
                 : undefined
             }
             className={`
@@ -193,22 +191,21 @@ function Navbar() {
       tracking-[-0.432px]
       transition-all duration-300
 
-      ${
-        currentPage === "/memori"
-          ? `
+      ${currentPage === "/memori"
+                ? `
             px-3 md:px-[16px] py-1.5 md:py-[8px]
             gap-1 md:gap-[12.732px]
             rounded-[12px]
             text-[#F5F5F5]
             shadow-[0_185px_52px_0_rgba(62,24,197,0),0_119px_47px_0_rgba(62,24,197,0.03),0_67px_40px_0_rgba(62,24,197,0.10),0_30px_30px_0_rgba(62,24,197,0.17),0_7px_16px_0_rgba(62,24,197,0.20)]
           `
-          : `
+                : `
             px-2 md:px-[6px] py-1 md:py-[4px]
             gap-[10px]
             text-[#505050]
             hover:text-[#303030]
           `
-      }
+              }
     `}
           >
             Memori
@@ -216,13 +213,22 @@ function Navbar() {
 
           <button
             onClick={() => goTo("/jurnal")}
-            className={`flex items-center justify-center px-2 py-1 text-center font-['Satoshi'] text-[12px] font-medium tracking-[-0.432px] transition-all duration-300 md:px-[6px] md:py-[4px] md:text-[14.408px] ${
-              currentPage === "/jurnal"
+            className={`flex items-center justify-center px-2 py-1 text-center font-['Satoshi'] text-[12px] font-medium tracking-[-0.432px] transition-all duration-300 md:px-[6px] md:py-[4px] md:text-[14.408px] ${currentPage === "/jurnal"
                 ? "rounded-[12px] bg-[#6C40E5] px-3 py-1.5 text-[#F5F5F5] shadow-[0_7px_16px_rgba(62,24,197,0.20)] md:px-[16px] md:py-[8px]"
                 : "text-[#505050] hover:text-[#303030]"
-            }`}
+              }`}
           >
             Jurnal
+          </button>
+
+          <button
+            onClick={() => goTo("/agenda")}
+            className={`flex items-center justify-center px-2 py-1 text-center font-['Satoshi'] text-[12px] font-medium tracking-[-0.432px] transition-all duration-300 md:px-[6px] md:py-[4px] md:text-[14.408px] ${currentPage === "/agenda"
+                ? "rounded-[12px] bg-[#6C40E5] px-3 py-1.5 text-[#F5F5F5] shadow-[0_7px_16px_rgba(62,24,197,0.20)] md:px-[16px] md:py-[8px]"
+                : "text-[#505050] hover:text-[#303030]"
+              }`}
+          >
+            Agenda
           </button>
         </div>
 
@@ -302,6 +308,13 @@ function Navbar() {
               className={`block w-full rounded-xl px-4 py-3 text-left font-['Satoshi'] text-sm font-medium ${currentPage === "/jurnal" ? "bg-[#F1ECFF] text-[#6C40E5]" : "text-[#505050]"}`}
             >
               Jurnal
+            </button>
+            <button
+              type="button"
+              onClick={() => goTo("/agenda")}
+              className={`block w-full rounded-xl px-4 py-3 text-left font-['Satoshi'] text-sm font-medium ${currentPage === "/agenda" ? "bg-[#F1ECFF] text-[#6C40E5]" : "text-[#505050]"}`}
+            >
+              Agenda
             </button>
             <a
               href="http://clips.id/effort"
