@@ -472,28 +472,28 @@ function Agenda() {
   return (
     <>
       <section className="w-full max-w-4xl mx-auto px-4 sm:px-6 pt-4 pb-16 animate-fade-in-up">
-        {/* Romantic Divider */}
-        <div className="flex items-center justify-center gap-3 mb-8">
-          <div className="h-[1px] w-12 sm:w-20 bg-gradient-to-r from-transparent to-purple-300"></div>
-          <span className="text-xl sm:text-2xl animate-pulse">✨🤍✨</span>
-          <div className="h-[1px] w-12 sm:w-20 bg-gradient-to-l from-transparent to-purple-300"></div>
-        </div>
+        <div className="mb-12 max-w">
+          <div className="flex justify-center items-center">
+            {/* Badge */}
+            <div className="flex inline-flex items-center gap-2 pl-2 pr-3 py-2 rounded-full bg-white border border-[#DCDCDC] mb-8 md:mb-10 hover:shadow-md transition-shadow cursor-default mt-8 md:mt-0">
+              <span className="inline-flex items-center justify-center rounded-full bg-[#6C40E5] px-2 py-1 text-center font-['Satoshi'] text-[10px] md:text-[12px] font-medium leading-normal tracking-[0.24px] text-white shadow-[0_7px_16px_0_rgba(62,24,197,0.20)]">
+                Rara
+              </span>
 
-        {/* Header Section */}
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-purple-50 border border-purple-200/80 mb-3 shadow-xs">
-            <span className="w-2 h-2 rounded-full bg-[#6C40E5] animate-ping"></span>
-            <span className="font-['Satoshi'] text-xs font-semibold text-[#6C40E5] tracking-wide uppercase">
-              Date Planner & Itinerary
-            </span>
+              <span className="font-['Satoshi'] text-[12px] md:text-[14px] font-medium leading-[100%] tracking-[-0.28px] text-[#505050]">
+                Date Planner & Itinerary
+              </span>
+            </div>
           </div>
-          <h1 className="font-['Satoshi'] text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mb-3">
+
+          <h1 className="font-['Satoshi'] text-center text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mb-3">
             Agenda Date Kita
           </h1>
-          <p className="font-['Satoshi'] text-sm sm:text-base text-gray-500 max-w-xl mx-auto">
-            Rencana kencan seru, jadwal aktivitas, dan kenangan manis di setiap tempat yang kita lalui berdua.
+          <p className="font-['Satoshi'] text-center text-sm sm:text-base text-gray-500 max-w-xl mx-auto">
+            Buat bikin rencana date seru, jadwal aktivitas yang dijalanin berdua.
           </p>
         </div>
+
 
         {/* Action Buttons Top */}
         <div className="flex flex-wrap items-center justify-center sm:justify-between gap-3 mb-8 pb-4 border-b border-gray-200/80">
@@ -511,7 +511,7 @@ function Agenda() {
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-purple-200 text-[#6C40E5] font-['Satoshi'] text-xs font-bold shadow-xs hover:bg-purple-50 hover:border-[#6C40E5] hover:-translate-y-0.5 transition-all duration-300"
             >
               <span className="text-base">🎡</span>
-              Spin Wheel ("Terserah")
+              Spin Wheel Kalo Kamu Jawab "Terserah"
             </button>
 
             <button

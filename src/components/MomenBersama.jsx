@@ -6,15 +6,15 @@ const TANGGAL_JADIAN = new Date(2024, 8, 14, 0, 0, 0); // 14 September 2024
 const MOMEN_LIST = [
   {
     id: "valentine",
-    title: "Hari Kasih Sayang (Valentine)",
+    title: "Valentine",
     month: 1, // Februari (0-indexed)
     day: 14,
     icon: "💖",
     color: "from-pink-500/20 to-rose-500/10 text-rose-600 border-rose-200",
     badgeBg: "bg-rose-50 text-rose-600 border-rose-200",
     accentColor: "#F43F5E",
-    description: "Hari kasih sayang penuh rasa syukur karena memiliki Rara di hidup Faiz.",
-    getPassedText: (count) => `Sudah ${count}x kita merayakan Valentine bersama`,
+    description: "Hari spesial penuh rasa senang karena aku punya kamu",
+    getPassedText: (count) => `Sudah ${count}x menjalani Valentine bareng`,
     getPendingText: () => "Menuju Valentine pertama kita bersama",
   },
   {
@@ -23,12 +23,12 @@ const MOMEN_LIST = [
     month: 4, // Mei
     day: 18,
     birthYear: 2005,
-    icon: "👑",
+    icon: "🎉",
     color: "from-purple-500/20 to-indigo-500/10 text-purple-600 border-purple-200",
     badgeBg: "bg-purple-50 text-purple-600 border-purple-200",
     accentColor: "#8B5CF6",
-    description: "Hari lahirnya perempuan tercantik, paling spesial, dan paling Faiz sayangi.",
-    getPassedText: (count) => `Sudah ${count}x Faiz mendampingi hari lahir Rara`,
+    description: "Hari lahirnya perempuanku tercantik, paling spesial",
+    getPassedText: (count) => `Sudah ${count}x aku menemani hari lahir Rara`,
     getPendingText: () => "Menuju ulang tahun Rara pertama sejak kita jadian",
   },
   {
@@ -175,26 +175,25 @@ export default function MomenBersama() {
 
   return (
     <section className="w-full max-w-4xl mx-auto px-4 sm:px-6 pt-12 pb-16">
-      {/* Divider Romantis */}
-      <div className="flex items-center justify-center gap-3 mb-10">
-        <div className="h-[1px] w-12 sm:w-20 bg-gradient-to-r from-transparent to-purple-300"></div>
-        <span className="text-xl sm:text-2xl animate-pulse">✨🤍✨</span>
-        <div className="h-[1px] w-12 sm:w-20 bg-gradient-to-l from-transparent to-purple-300"></div>
-      </div>
+      <div className="mb-12 max-w">
+        <div className="flex justify-center items-center">
+          {/* Badge */}
+          <div className="flex inline-flex items-center gap-2 pl-2 pr-3 py-2 rounded-full bg-white border border-[#DCDCDC] mb-8 md:mb-10 hover:shadow-md transition-shadow cursor-default mt-8 md:mt-0">
+            <span className="inline-flex items-center justify-center rounded-full bg-[#6C40E5] px-2 py-1 text-center font-['Satoshi'] text-[10px] md:text-[12px] font-medium leading-normal tracking-[0.24px] text-white shadow-[0_7px_16px_0_rgba(62,24,197,0.20)]">
+              Rara
+            </span>
 
-      {/* Header Section */}
-      <div className="text-center mb-10">
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-purple-50 border border-purple-200/80 mb-3 shadow-sm">
-          <span className="w-2 h-2 rounded-full bg-[#6C40E5] animate-ping"></span>
-          <span className="font-['Satoshi'] text-xs font-semibold text-[#6C40E5] tracking-wide uppercase">
-            Jejak Waktu Bersama
-          </span>
+            <span className="font-['Satoshi'] text-[12px] md:text-[14px] font-medium leading-[100%] tracking-[-0.28px] text-[#505050]">
+              Momen Indah yang Kita Lalui
+            </span>
+          </div>
         </div>
-        <h2 className="font-['Satoshi'] text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mb-3">
-          Momen Indah yang Kita Lalui
-        </h2>
-        <p className="font-['Satoshi'] text-sm sm:text-base text-gray-500 max-w-xl mx-auto">
-          Dihitung otomatis sejak pertama kali kita resmi bersama pada{" "}
+
+        <h1 className="font-['Satoshi'] text-center text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mb-3">
+          Jurnal Tentang Rara
+        </h1>
+        <p className="font-['Satoshi'] text-center text-sm sm:text-base text-gray-500 max-w-xl mx-auto">
+          Haloo SAYANG ini dihitung dari tanggal jadian yahh, kalo lupa ini tanggalnya{" "}
           <span className="font-semibold text-[#6C40E5]">14 September 2024</span>
         </p>
       </div>
@@ -206,7 +205,7 @@ export default function MomenBersama() {
 
         <div className="relative z-10 text-center">
           <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#6C40E5] mb-2 font-['Satoshi']">
-            Total Perjalanan Cinta Kita
+            Total Waktu Bersama
           </p>
           <div className="text-2xl sm:text-3xl font-extrabold text-gray-900 font-['Satoshi'] mb-6">
             {diffYears > 0 ? `${diffYears} Tahun ` : ""}
@@ -253,8 +252,7 @@ export default function MomenBersama() {
           </div>
 
           <div className="mt-5 inline-flex items-center gap-1.5 text-xs text-gray-500 bg-white/70 px-3 py-1 rounded-full border border-gray-100">
-            <span>✨</span>
-            <span>Atau sudah melewati <b>{totalMonthsTogether} kali Monthlyversary</b> bersama</span>
+            <span>sudah melewati <b>{totalMonthsTogether} kali Monthlyversary</b> bersama</span>
           </div>
         </div>
       </div>
@@ -302,8 +300,8 @@ export default function MomenBersama() {
                 {/* Badge Highlight "Sudah X kali..." */}
                 <div
                   className={`rounded-xl p-3.5 border mb-3 flex items-center gap-2.5 transition-colors ${passedCount > 0
-                      ? item.badgeBg
-                      : "bg-gray-50 text-gray-600 border-gray-200"
+                    ? item.badgeBg
+                    : "bg-gray-50 text-gray-600 border-gray-200"
                     }`}
                 >
                   <span className="text-lg">
@@ -339,18 +337,6 @@ export default function MomenBersama() {
             </div>
           );
         })}
-      </div>
-
-      {/* Quote / Catatan Manis di Bawah */}
-      <div className="mt-10 text-center p-6 rounded-2xl bg-white/70 border border-purple-100/60 shadow-sm">
-        <p className="font-['Satoshi'] text-xs sm:text-sm text-[#5B526F] italic">
-          &ldquo;Setiap detik yang terlewat bersamamu adalah momen terbaik, dan
-          setiap momen yang akan datang adalah alasan Faiz untuk terus menjadi
-          yang terbaik untuk Rara.&rdquo;
-        </p>
-        <span className="inline-block mt-2 font-['Satoshi'] text-xs font-bold text-[#6C40E5]">
-          — Faiz untuk Rara 🤍
-        </span>
       </div>
     </section>
   );

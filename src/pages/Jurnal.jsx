@@ -41,17 +41,23 @@ function Jurnal() {
 
   return (
     <section className="w-full max-w-5xl px-6 py-8 md:px-10 md:py-14 animate-fade-in-up">
-      <div className="mb-12 max-w-2xl">
-        <p className="mb-4 font-['Satoshi'] text-xs font-bold uppercase tracking-[0.24em] text-[#6C40E5]">
-          Catatan yang aku bagikan
-        </p>
-        <h1 className="font-['Satoshi'] text-5xl font-bold leading-[0.95] tracking-[-2px] text-[#202020] md:text-7xl">
+      <div className="mb-12 max-w">
+        <div className="flex justify-center items-center">
+          {/* Badge */}
+          <div className="flex inline-flex items-center gap-2 pl-2 pr-3 py-2 rounded-full bg-white border border-[#DCDCDC] mb-8 md:mb-10 hover:shadow-md transition-shadow cursor-default mt-8 md:mt-0">
+            <span className="inline-flex items-center justify-center rounded-full bg-[#6C40E5] px-2 py-1 text-center font-['Satoshi'] text-[10px] md:text-[12px] font-medium leading-normal tracking-[0.24px] text-white shadow-[0_7px_16px_0_rgba(62,24,197,0.20)]">
+              Rara
+            </span>
+
+            <span className="font-['Satoshi'] text-[12px] md:text-[14px] font-medium leading-[100%] tracking-[-0.28px] text-[#505050]">
+              Catatan yang aku bagikan
+            </span>
+          </div>
+        </div>
+
+        <h1 className="font-['Satoshi'] text-center text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mb-3">
           Jurnal Tentang Rara
         </h1>
-        <p className="mt-6 max-w-xl text-base leading-relaxed text-[#6A6A6A] md:text-lg">
-          Potongan cerita dan perasaan yang ingin aku simpan, lalu dibaca
-          bersama
-        </p>
       </div>
 
       {!isSupabaseConfigured && (
