@@ -13,14 +13,14 @@ function Footer() {
         />
       </div>
 
-      <div className="grid min-h-[58px] grid-cols-3 border-t border-[#dedede] bg-white text-[#292929] md:grid-cols-4">
+      <div className="grid min-h-[58px] grid-cols-3 border-t border-[#dedede] bg-white text-[#292929] md:grid-cols-5">
         <Link
           to="/poin-inti"
           className="flex items-center justify-center border-r border-[#e4e4e4] px-3 py-4 text-center font-['Satoshi'] text-[11px] transition-colors hover:bg-[#f4f0ff] md:text-sm"
         >
           Poin Inti
         </Link>
-                <Link
+        <Link
           to="/momen"
           className="flex items-center justify-center border-r border-[#e4e4e4] px-3 py-4 text-center font-['Satoshi'] text-[11px] transition-colors hover:bg-[#f4f0ff] md:text-sm"
         >
@@ -38,7 +38,13 @@ function Footer() {
         >
           Jurnal
         </Link>
-        <div className="col-span-3 flex items-center justify-center gap-1.5 px-3 py-2 text-center font-['Satoshi'] text-[10px] md:col-span-1 md:text-sm">
+        <Link
+          to="/agenda"
+          className="flex items-center justify-center border-r border-[#e4e4e4] px-3 py-4 text-center font-['Satoshi'] text-[11px] transition-colors hover:bg-[#f4f0ff] md:text-sm"
+        >
+          Agenda
+        </Link>
+        <div className="col-span-full flex items-center justify-center gap-1.5 px-3 py-2 text-center font-['Satoshi'] text-[10px] md:text-sm">
           <span>Made with</span>
           <img src={heartImage} alt="love" className="h-8 w-8 object-contain" />
           <span>By Faiz Fauzan in Malang.</span>
