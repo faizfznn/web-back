@@ -1,0 +1,142 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Rutinitas Religius dan Skripsi Harian//ID
+CALSCALE:GREGORIAN
+
+BEGIN:VEVENT
+SUMMARY:Sholat Malam (Tahajud, Hajat, Witir) & Munajat
+RRULE:FREQ=DAILY
+DTSTART:20261005T034500
+DTEND:20261005T044500
+DESCRIPTION:Tahajud (2-4 rakaat), Hajat (2 rakaat: doa kesembuhan ayah, rezeki 6jt pengganti, kelulusan 3.5 thn, paid intern), ditutup Witir 3 rakaat.
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY:Rise and Shine
+RRULE:FREQ=DAILY
+DTSTART:20261005T050000
+DTEND:20261005T053000
+DESCRIPTION:Bangun pagi, minum air putih hangat, persiapan Subuh.
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY:Subuh + Ngaji
+RRULE:FREQ=DAILY
+DTSTART:20261005T053000
+DTEND:20261005T060000
+DESCRIPTION:Sholat Subuh berjamaah, dzikir pagi, dan tilawah Surah Al-Waqi'ah / Yasin.
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY:Beresin Kamar + Mandi
+RRULE:FREQ=DAILY
+DTSTART:20261005T060000
+DTEND:20261005T070000
+DESCRIPTION:Merapikan kamar, persiapan diri, dan mandi pagi.
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY:Me Time & Dampingi Ayah Jalan Pagi
+RRULE:FREQ=DAILY
+DTSTART:20261005T070000
+DTEND:20261005T083000
+DESCRIPTION:Sarapan sehat, jalan santai/olahraga ringan pagi bersama ayah untuk membiasakan hidup aktif tanpa rokok.
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY:Sholat Dhuha & Doa Rezeki
+RRULE:FREQ=DAILY
+DTSTART:20261005T083000
+DTEND:20261005T090000
+DESCRIPTION:Sholat Dhuha 2-4 rakaat, Doa pembuka pintu rezeki, Istighfar Dhuha 100x.
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY:Skripsi Deep Work (Sesi 1 - 2.5 Jam)
+RRULE:FREQ=DAILY
+DTSTART:20261005T090000
+DTEND:20261005T113000
+DESCRIPTION:Fokus penuh menulis skripsi, pengolahan data, atau eksperimen coding skripsi tanpa distraksi media sosial.
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY:Persiapan Dzuhur & Solat Zuhur
+RRULE:FREQ=DAILY
+DTSTART:20261005T113000
+DTEND:20261005T123000
+DESCRIPTION:Wudhu, sholat sunnah rawatib, Sholat Dzuhur tepat waktu.
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY:Makan Siang & Qailulah (Istirahat Singkat)
+RRULE:FREQ=DAILY
+DTSTART:20261005T123000
+DTEND:20261005T133000
+DESCRIPTION:Makan siang bersama keluarga dan tidur siang singkat (sunnah qailulah) 15-20 menit.
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY:Self Development & Lamar Paid Intern Remote
+RRULE:FREQ=DAILY
+DTSTART:20261005T133000
+DTEND:20261005T153000
+DESCRIPTION:Eksplorasi skill, portofolio, dan memantau status aplikasi lowongan paid remote internship.
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY:Solat Ashar + Dzikir Petang
+RRULE:FREQ=DAILY
+DTSTART:20261005T153000
+DTEND:20261005T163000
+DESCRIPTION:Sholat Ashar tepat waktu, membaca Sayyidul Istighfar dan dzikir petang.
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY:Skripsi Deep Work (Sesi 2 - 1 Jam) / Me Time
+RRULE:FREQ=DAILY
+DTSTART:20261005T163000
+DTEND:20261005T173000
+DESCRIPTION:Menyelesaikan target skripsi hari ini (total hari ini 3.5 jam) atau evaluasi progres harian skripsi.
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY:Solat Maghrib + Ngaji (Surah Al-Mulk)
+RRULE:FREQ=DAILY
+DTSTART:20261005T174500
+DTEND:20261005T183000
+DESCRIPTION:Sholat Maghrib berjamaah, Ba'diyah 2 rakaat, dilanjutkan membaca Surah Al-Mulk dan tadarus Al-Qur'an.
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY:Self Development & Family Time
+RRULE:FREQ=DAILY
+DTSTART:20261005T183000
+DTEND:20261005T200000
+DESCRIPTION:Belajar mandiri ringan, diskusi dan menemani ayah/keluarga.
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY:Solat Isya + Ba'diyah
+RRULE:FREQ=DAILY
+DTSTART:20261005T200000
+DTEND:20261005T203000
+DESCRIPTION:Sholat Isya tepat waktu ditambah sholat sunnah Ba'diyah Isya 2 rakaat.
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY:Me Time & Persiapan Istirahat
+RRULE:FREQ=DAILY
+DTSTART:20261005T203000
+DTEND:20261005T213000
+DESCRIPTION:Santai malam, relaksasi pikiran, menjauhkan layar gawai.
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY:Batas Tidur & Dzikir Tidur
+RRULE:FREQ=DAILY
+DTSTART:20261005T213000
+DTEND:20261005T220000
+DESCRIPTION:Wudhu sebelum tidur, 3 Qul, Ayat Kursi, Sayyidul Istighfar. Maksimal tidur jam 22.00 agar bangun segar jam 03.45.
+END:VEVENT
+
+END:VCALENDAR
