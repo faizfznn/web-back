@@ -22,7 +22,7 @@ function App() {
         <Navbar />
         <MusicPlayer />
 
-        <main className="pt-32 pb-20 px-0 max-w-none flex flex-col items-center justify-center min-h-screen">
+        <main className="pt-32 pb-20 px-0 max-w-none flex flex-col items-center min-h-screen">
           <Routes>
             <Route path="/" element={<Navigate to="/poin-inti" replace />} />
             <Route path="/poin-inti" element={<PoinInti />} />

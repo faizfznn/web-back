@@ -1,4 +1,3 @@
-import React from "react";
 import MomenBersama from "../components/MomenBersama";
 
 function Momen() {
