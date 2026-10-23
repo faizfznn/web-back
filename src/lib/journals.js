@@ -41,9 +41,8 @@ export async function getPublicJournal(id) {
 
   return supabase
     .from("journals")
-    .select("id, title, content, image_url, published_at, created_at")
+    .select("id, title, content, image_url, published_at, created_at, is_public")
     .eq("id", id)
-    .eq("is_public", true)
     .single();
 }
 
@@ -69,9 +68,7 @@ export async function saveJournal(journal) {
       content: (journal.content || "").trim(),
       image_url: journal.image_url ? journal.image_url.trim() || null : null,
       is_public: Boolean(journal.is_public),
-      published_at: journal.is_public
-        ? journal.published_at || new Date().toISOString()
-        : null,
+      published_at: journal.published_at || null,
     };
 
     if (journal.id) {

@@ -20,6 +20,7 @@ import {
   CheckCircleIcon,
   XIcon,
   RotateCwIcon,
+  GlobeIcon,
 } from "../components/icons";
 
 const emptyJournal = {
@@ -27,9 +28,42 @@ const emptyJournal = {
   title: "",
   content: "",
   image_url: "",
-  is_public: false,
+  visibility_mode: "admin_only", // 'public' | 'admin_only' | 'draft'
   published_at: null,
 };
+
+function getJournalStatus(j) {
+  if (j.is_public) return "public";
+  if (j.published_at) return "admin_only";
+  return "draft";
+}
+
+function getStatusBadge(status) {
+  switch (status) {
+    case "public":
+      return {
+        label: "Publik",
+        colorClass: "bg-emerald-50 text-emerald-700 border-emerald-200/80",
+        dotClass: "bg-emerald-500",
+        description: "Terbit untuk Rara & publik",
+      };
+    case "admin_only":
+      return {
+        label: "Khusus Admin",
+        colorClass: "bg-purple-50 text-purple-700 border-purple-200/80",
+        dotClass: "bg-[#6C40E5]",
+        description: "Terbit privat hanya untuk Admin",
+      };
+    case "draft":
+    default:
+      return {
+        label: "Draf",
+        colorClass: "bg-zinc-100 text-zinc-600 border-zinc-200",
+        dotClass: "bg-zinc-400",
+        description: "Konsep belum diterbitkan",
+      };
+  }
+}
 
 function formatDate(value) {
   if (!value) return "-";
@@ -46,10 +80,11 @@ function AdminJurnal() {
   const [password, setPassword] = useState("");
   const [journal, setJournal] = useState(emptyJournal);
   const [journals, setJournals] = useState([]);
+  const [selectedDetail, setSelectedDetail] = useState(null);
   const [message, setMessage] = useState({ type: "", text: "" });
   const [loading, setLoading] = useState(false);
   const [uploadingImage, setUploadingImage] = useState(false);
-  const [filter, setFilter] = useState("all"); // 'all' | 'public' | 'draft'
+  const [filter, setFilter] = useState("all"); // 'all' | 'public' | 'admin_only' | 'draft'
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
@@ -108,13 +143,46 @@ function AdminJurnal() {
     setMessage({ type: "", text: "" });
 
     try {
-      const { error } = await saveJournal(journal);
+      let is_public = false;
+      let published_at = null;
+
+      if (journal.visibility_mode === "public") {
+        is_public = true;
+        published_at = journal.published_at || new Date().toISOString();
+      } else if (journal.visibility_mode === "admin_only") {
+        is_public = false;
+        published_at = journal.published_at || new Date().toISOString();
+      } else {
+        // draft
+        is_public = false;
+        published_at = null;
+      }
+
+      const payload = {
+        id: journal.id,
+        title: journal.title,
+        content: journal.content,
+        image_url: journal.image_url,
+        is_public,
+        published_at,
+      };
+
+      const { error } = await saveJournal(payload);
       if (error) {
         setMessage({ type: "error", text: error.message || "Gagal menyimpan jurnal." });
       } else {
+        const modeLabel =
+          journal.visibility_mode === "public"
+            ? "diterbitkan untuk Rara & Publik"
+            : journal.visibility_mode === "admin_only"
+              ? "diterbitkan khusus Admin (Privat)"
+              : "disimpan sebagai Draf";
+
         setMessage({
           type: "success",
-          text: journal.id ? "Catatan berhasil diperbarui." : "Catatan baru berhasil disimpan.",
+          text: journal.id
+            ? `Catatan berhasil diperbarui (${modeLabel}).`
+            : `Catatan baru berhasil ${modeLabel}.`,
         });
         setJournal(emptyJournal);
         await loadJournals();
@@ -182,12 +250,8 @@ function AdminJurnal() {
   // Filtered & Searched Journals
   const filteredJournals = useMemo(() => {
     return journals.filter((item) => {
-      const matchesFilter =
-        filter === "all"
-          ? true
-          : filter === "public"
-            ? item.is_public
-            : !item.is_public;
+      const status = getJournalStatus(item);
+      const matchesFilter = filter === "all" ? true : status === filter;
 
       const matchesSearch = item.title
         ?.toLowerCase()
@@ -201,8 +265,9 @@ function AdminJurnal() {
   const stats = useMemo(() => {
     const total = journals.length;
     const publicCount = journals.filter((j) => j.is_public).length;
-    const draftCount = total - publicCount;
-    return { total, publicCount, draftCount };
+    const adminCount = journals.filter((j) => !j.is_public && j.published_at).length;
+    const draftCount = journals.filter((j) => !j.is_public && !j.published_at).length;
+    return { total, publicCount, adminCount, draftCount };
   }, [journals]);
 
   // Metrics for current editing content
@@ -539,27 +604,81 @@ function AdminJurnal() {
                 )}
               </div>
 
-              {/* Public Visibility Toggle Card */}
-              <div className="rounded-2xl border border-zinc-200 bg-zinc-50/70 p-4">
-                <label className="flex cursor-pointer items-start gap-3">
-                  <input
-                    type="checkbox"
-                    checked={journal.is_public}
-                    onChange={(event) =>
-                      setJournal({ ...journal, is_public: event.target.checked })
+              {/* Status Publikasi & Hak Akses Selector */}
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <label className="block text-xs font-semibold text-zinc-700">
+                    Status Publikasi & Hak Akses <span className="text-red-500">*</span>
+                  </label>
+                  <span className="text-[11px] font-medium text-zinc-400">
+                    Pilih siapa yang dapat membaca
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                  {/* Option 1: Khusus Admin */}
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setJournal({ ...journal, visibility_mode: "admin_only" })
                     }
-                    className="mt-0.5 h-4 w-4 rounded accent-[#6C40E5]"
-                  />
-                  <div>
-                    <span className="block text-xs font-bold text-zinc-800">
-                      Tampilkan untuk Rara / Publik
-                    </span>
-                    <span className="block mt-0.5 text-[11px] text-zinc-500 leading-normal">
-                      Jika dicentang, catatan ini akan langsung dapat dibaca oleh Rara
-                      di menu Jurnal. Jika tidak dicentang, catatan akan berstatus draf.
-                    </span>
-                  </div>
-                </label>
+                    className={`flex flex-col text-left p-3.5 rounded-2xl border transition-all ${
+                      journal.visibility_mode === "admin_only"
+                        ? "border-[#6C40E5] bg-[#F7F4FF] shadow-xs ring-1 ring-[#6C40E5]"
+                        : "border-zinc-200 bg-white hover:border-zinc-300 hover:bg-zinc-50"
+                    }`}
+                  >
+                    <div className="flex items-center gap-1.5 font-bold text-xs text-[#6C40E5]">
+                      <LockIcon className="h-3.5 w-3.5" />
+                      <span>Khusus Admin</span>
+                    </div>
+                    <p className="mt-1 text-[11px] text-zinc-500 leading-normal">
+                      Terbit privat untuk Admin saja. Rara & publik tidak dapat melihat.
+                    </p>
+                  </button>
+
+                  {/* Option 2: Publik */}
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setJournal({ ...journal, visibility_mode: "public" })
+                    }
+                    className={`flex flex-col text-left p-3.5 rounded-2xl border transition-all ${
+                      journal.visibility_mode === "public"
+                        ? "border-emerald-500 bg-emerald-50/60 shadow-xs ring-1 ring-emerald-500"
+                        : "border-zinc-200 bg-white hover:border-zinc-300 hover:bg-zinc-50"
+                    }`}
+                  >
+                    <div className="flex items-center gap-1.5 font-bold text-xs text-emerald-700">
+                      <GlobeIcon className="h-3.5 w-3.5" />
+                      <span>Publik (Rara)</span>
+                    </div>
+                    <p className="mt-1 text-[11px] text-zinc-500 leading-normal">
+                      Diterbitkan langsung di menu Jurnal untuk Rara dan publik.
+                    </p>
+                  </button>
+
+                  {/* Option 3: Draf */}
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setJournal({ ...journal, visibility_mode: "draft" })
+                    }
+                    className={`flex flex-col text-left p-3.5 rounded-2xl border transition-all ${
+                      journal.visibility_mode === "draft"
+                        ? "border-zinc-600 bg-zinc-100/80 shadow-xs ring-1 ring-zinc-600"
+                        : "border-zinc-200 bg-white hover:border-zinc-300 hover:bg-zinc-50"
+                    }`}
+                  >
+                    <div className="flex items-center gap-1.5 font-bold text-xs text-zinc-700">
+                      <FileTextIcon className="h-3.5 w-3.5" />
+                      <span>Draf Konsep</span>
+                    </div>
+                    <p className="mt-1 text-[11px] text-zinc-500 leading-normal">
+                      Simpan sebagai konsep tulisan yang belum siap terbit.
+                    </p>
+                  </button>
+                </div>
               </div>
 
               {/* Submit Button */}
@@ -572,8 +691,16 @@ function AdminJurnal() {
                   {loading
                     ? "Menyimpan ke Database..."
                     : journal.id
-                      ? "Perbarui Catatan"
-                      : "Simpan & Terbitkan"}
+                      ? journal.visibility_mode === "public"
+                        ? "Perbarui & Terbitkan untuk Publik"
+                        : journal.visibility_mode === "admin_only"
+                          ? "Perbarui & Terbitkan Khusus Admin"
+                          : "Perbarui sebagai Draf"
+                      : journal.visibility_mode === "public"
+                        ? "Simpan & Terbitkan untuk Publik"
+                        : journal.visibility_mode === "admin_only"
+                          ? "Simpan & Terbitkan Khusus Admin"
+                          : "Simpan sebagai Draf"}
                 </button>
 
                 {journal.id && (
@@ -605,11 +732,11 @@ function AdminJurnal() {
               </div>
 
               {/* Filter Tabs */}
-              <div className="mt-3 flex gap-1 rounded-xl bg-zinc-100 p-1 text-xs">
+              <div className="mt-3 grid grid-cols-4 gap-1 rounded-xl bg-zinc-100 p-1 text-[11px] sm:text-xs">
                 <button
                   type="button"
                   onClick={() => setFilter("all")}
-                  className={`flex-1 rounded-lg py-1.5 font-semibold transition ${filter === "all"
+                  className={`rounded-lg py-1.5 font-semibold transition text-center truncate ${filter === "all"
                       ? "bg-white text-zinc-900 shadow-xs"
                       : "text-zinc-500 hover:text-zinc-800"
                     }`}
@@ -619,7 +746,7 @@ function AdminJurnal() {
                 <button
                   type="button"
                   onClick={() => setFilter("public")}
-                  className={`flex-1 rounded-lg py-1.5 font-semibold transition ${filter === "public"
+                  className={`rounded-lg py-1.5 font-semibold transition text-center truncate ${filter === "public"
                       ? "bg-white text-emerald-700 shadow-xs"
                       : "text-zinc-500 hover:text-zinc-800"
                     }`}
@@ -628,8 +755,18 @@ function AdminJurnal() {
                 </button>
                 <button
                   type="button"
+                  onClick={() => setFilter("admin_only")}
+                  className={`rounded-lg py-1.5 font-semibold transition text-center truncate ${filter === "admin_only"
+                      ? "bg-white text-[#6C40E5] shadow-xs"
+                      : "text-zinc-500 hover:text-zinc-800"
+                    }`}
+                >
+                  Admin ({stats.adminCount})
+                </button>
+                <button
+                  type="button"
                   onClick={() => setFilter("draft")}
-                  className={`flex-1 rounded-lg py-1.5 font-semibold transition ${filter === "draft"
+                  className={`rounded-lg py-1.5 font-semibold transition text-center truncate ${filter === "draft"
                       ? "bg-white text-zinc-900 shadow-xs"
                       : "text-zinc-500 hover:text-zinc-800"
                     }`}
@@ -658,6 +795,9 @@ function AdminJurnal() {
               ) : (
                 filteredJournals.map((item) => {
                   const isEditingThis = journal.id === item.id;
+                  const itemStatus = getJournalStatus(item);
+                  const badge = getStatusBadge(itemStatus);
+
                   return (
                     <article
                       key={item.id}
@@ -670,25 +810,22 @@ function AdminJurnal() {
                         <div className="min-w-0 flex-1">
                           <div className="flex items-center gap-2">
                             <span
-                              className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-semibold ${item.is_public
-                                  ? "bg-emerald-50 text-emerald-700 border border-emerald-200/60"
-                                  : "bg-zinc-100 text-zinc-600 border border-zinc-200"
-                                }`}
+                              className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-semibold border ${badge.colorClass}`}
                             >
                               <span
-                                className={`h-1.5 w-1.5 rounded-full ${item.is_public
-                                    ? "bg-emerald-500"
-                                    : "bg-zinc-400"
-                                  }`}
+                                className={`h-1.5 w-1.5 rounded-full ${badge.dotClass}`}
                               />
-                              {item.is_public ? "Publik" : "Draf"}
+                              {badge.label}
                             </span>
                             <span className="text-[11px] text-zinc-400 tabular-nums">
                               {formatDate(item.published_at || item.created_at)}
                             </span>
                           </div>
 
-                          <h3 className="mt-1.5 line-clamp-2 font-['Satoshi'] text-xs font-bold leading-snug text-zinc-900">
+                          <h3
+                            onClick={() => setSelectedDetail(item)}
+                            className="mt-1.5 line-clamp-2 font-['Satoshi'] text-xs font-bold leading-snug text-zinc-900 hover:text-[#6C40E5] cursor-pointer transition-colors"
+                          >
                             {item.title}
                           </h3>
 
@@ -699,33 +836,33 @@ function AdminJurnal() {
 
                         {/* Row Actions */}
                         <div className="flex items-center gap-1 shrink-0 pt-1">
-                          {item.is_public && (
-                            <Link
-                              to={`/jurnal/${item.id}`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              title="Pratinjau tampilan publik"
-                              className="rounded-lg border border-zinc-200 p-1.5 text-zinc-500 hover:border-zinc-300 hover:bg-zinc-50 hover:text-zinc-800"
-                            >
-                              <EyeIcon className="h-3.5 w-3.5" />
-                            </Link>
-                          )}
+                          {/* View Detail Button - Always Available */}
+                          <button
+                            type="button"
+                            onClick={() => setSelectedDetail(item)}
+                            title="Lihat detail catatan ini"
+                            className="inline-flex items-center gap-1 rounded-lg border border-zinc-200 bg-white px-2 py-1 text-[11px] font-semibold text-zinc-700 shadow-xs transition hover:border-[#6C40E5]/40 hover:bg-[#F5F2FF] hover:text-[#6C40E5]"
+                          >
+                            <EyeIcon className="h-3.5 w-3.5" />
+                            <span className="hidden sm:inline">Detail</span>
+                          </button>
 
                           <button
                             type="button"
                             onClick={() => {
+                              const mode = getJournalStatus(item);
                               setJournal({
                                 id: item.id,
                                 title: item.title || "",
                                 content: item.content || "",
                                 image_url: item.image_url || "",
-                                is_public: Boolean(item.is_public),
+                                visibility_mode: mode,
                                 published_at: item.published_at || null,
                               });
                               window.scrollTo({ top: 120, behavior: "smooth" });
                             }}
                             title="Edit catatan ini"
-                            className="rounded-lg border border-zinc-200 p-1.5 text-zinc-600 hover:border-[#6C40E5]/40 hover:bg-[#F5F2FF] hover:text-[#6C40E5]"
+                            className="rounded-lg border border-zinc-200 bg-white p-1.5 text-zinc-600 shadow-xs transition hover:border-[#6C40E5]/40 hover:bg-[#F5F2FF] hover:text-[#6C40E5]"
                           >
                             <EditIcon className="h-3.5 w-3.5" />
                           </button>
@@ -734,7 +871,7 @@ function AdminJurnal() {
                             type="button"
                             onClick={() => handleDelete(item.id, item.title)}
                             title="Hapus catatan ini"
-                            className="rounded-lg border border-zinc-200 p-1.5 text-zinc-400 hover:border-red-200 hover:bg-red-50 hover:text-red-600"
+                            className="rounded-lg border border-zinc-200 bg-white p-1.5 text-zinc-400 shadow-xs transition hover:border-red-200 hover:bg-red-50 hover:text-red-600"
                           >
                             <TrashIcon className="h-3.5 w-3.5" />
                           </button>
@@ -748,6 +885,115 @@ function AdminJurnal() {
           </div>
         </section>
       </div>
+
+      {/* View Detail Modal for Admin */}
+      {selectedDetail && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-xs animate-fade-in"
+          onClick={() => setSelectedDetail(null)}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="relative flex max-h-[90vh] w-full max-w-2xl flex-col rounded-3xl border border-zinc-200 bg-white shadow-2xl overflow-hidden animate-fade-in-up"
+          >
+            {/* Modal Header */}
+            <div className="flex items-center justify-between border-b border-zinc-100 px-6 py-4 bg-zinc-50/70">
+              <div className="flex items-center gap-2">
+                {(() => {
+                  const badge = getStatusBadge(getJournalStatus(selectedDetail));
+                  return (
+                    <span
+                      className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-semibold border ${badge.colorClass}`}
+                    >
+                      <span className={`h-1.5 w-1.5 rounded-full ${badge.dotClass}`} />
+                      {badge.label}
+                    </span>
+                  );
+                })()}
+                <span className="text-xs text-zinc-400 tabular-nums">
+                  {formatDate(selectedDetail.published_at || selectedDetail.created_at)}
+                </span>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setSelectedDetail(null)}
+                aria-label="Tutup pratinjau"
+                className="rounded-xl border border-zinc-200 p-1.5 text-zinc-400 hover:bg-zinc-100 hover:text-zinc-700 transition"
+              >
+                <XIcon className="h-4 w-4" />
+              </button>
+            </div>
+
+            {/* Modal Body - Scrollable */}
+            <div className="flex-1 overflow-y-auto px-6 py-6 sm:px-8 space-y-5">
+              <h2 className="font-['Satoshi'] text-2xl font-bold tracking-tight text-zinc-900 leading-snug">
+                {selectedDetail.title}
+              </h2>
+
+              {selectedDetail.image_url && (
+                <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-900">
+                  <img
+                    src={selectedDetail.image_url}
+                    alt={selectedDetail.title}
+                    className="max-h-72 w-full object-cover"
+                  />
+                </div>
+              )}
+
+              <div className="space-y-4 text-sm leading-relaxed text-zinc-700 font-sans whitespace-pre-wrap">
+                {selectedDetail.content}
+              </div>
+            </div>
+
+            {/* Modal Footer */}
+            <div className="flex flex-wrap items-center justify-between gap-3 border-t border-zinc-100 px-6 py-4 bg-zinc-50/70">
+              <Link
+                to={`/jurnal/${selectedDetail.id}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#6C40E5] hover:underline"
+              >
+                <span>Buka di Halaman Penuh</span>
+                <ExternalLinkIcon className="h-3.5 w-3.5" />
+              </Link>
+
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => {
+                    const item = selectedDetail;
+                    const mode = getJournalStatus(item);
+                    setJournal({
+                      id: item.id,
+                      title: item.title || "",
+                      content: item.content || "",
+                      image_url: item.image_url || "",
+                      visibility_mode: mode,
+                      published_at: item.published_at || null,
+                    });
+                    setSelectedDetail(null);
+                    window.scrollTo({ top: 120, behavior: "smooth" });
+                  }}
+                  className="inline-flex items-center gap-1.5 rounded-xl border border-zinc-200 bg-white px-3.5 py-2 text-xs font-semibold text-zinc-700 shadow-xs hover:bg-zinc-50"
+                >
+                  <EditIcon className="h-3.5 w-3.5" />
+                  <span>Edit Catatan Ini</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setSelectedDetail(null)}
+                  className="rounded-xl bg-zinc-900 px-4 py-2 text-xs font-semibold text-white shadow-xs hover:bg-zinc-800"
+                >
+                  Tutup
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

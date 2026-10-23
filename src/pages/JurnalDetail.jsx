@@ -15,6 +15,7 @@ import {
   FeatherIcon,
   HeartIcon,
   XIcon,
+  LockIcon,
 } from "../components/icons";
 
 function formatDateFull(value) {
@@ -379,6 +380,30 @@ function JurnalDetail() {
         {/* Ready State: Editorial Article */}
         {status === "ready" && journal && (
           <article className="w-full">
+            {/* Admin Private Notice Banner */}
+            {!journal.is_public && (
+              <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-purple-200 bg-[#F7F4FF] p-4 text-xs">
+                <div className="flex items-center gap-2 text-purple-950 font-medium">
+                  <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#6C40E5] text-white shrink-0">
+                    <LockIcon className="h-4 w-4" />
+                  </div>
+                  <span>
+                    <strong>Mode Pratinjau Admin:</strong> Catatan ini berstatus{" "}
+                    <span className="font-bold underline decoration-[#6C40E5]">
+                      Khusus Admin
+                    </span>
+                    . Rara dan pengunjung umum tidak dapat melihat halaman ini.
+                  </span>
+                </div>
+                <Link
+                  to="/admin"
+                  className="inline-flex items-center gap-1.5 rounded-xl bg-[#6C40E5] px-3.5 py-2 font-semibold text-white shadow-xs transition hover:bg-[#5931CC]"
+                >
+                  <span>Ke Panel Admin</span>
+                </Link>
+              </div>
+            )}
+
             {/* Editorial Header */}
             <header className="mb-8">
               {/* Category & Badge */}
