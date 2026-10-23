@@ -30,7 +30,8 @@ function App() {
             <Route path="/memori" element={<Memori />} />
             <Route path="/jurnal" element={<Jurnal />} />
             <Route path="/jurnal/:id" element={<JurnalDetail />} />
-            <Route path="/admin/jurnal" element={<AdminJurnal />} />
+            <Route path="/admin" element={<AdminJurnal />} />
+            <Route path="/admin/jurnal" element={<Navigate to="/admin" replace />} />
             <Route path="/agenda" element={<Agenda />} />
           </Routes>
         </main>
