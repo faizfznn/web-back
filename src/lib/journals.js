@@ -63,26 +63,30 @@ export async function saveJournal(journal) {
     return { data: null, error: new Error("Supabase belum dikonfigurasi.") };
   }
 
-  const payload = {
-    title: journal.title.trim(),
-    content: journal.content.trim(),
-    image_url: journal.image_url.trim() || null,
-    is_public: journal.is_public,
-    published_at: journal.is_public
-      ? journal.published_at || new Date().toISOString()
-      : null,
-  };
+  try {
+    const payload = {
+      title: (journal.title || "").trim(),
+      content: (journal.content || "").trim(),
+      image_url: journal.image_url ? journal.image_url.trim() || null : null,
+      is_public: Boolean(journal.is_public),
+      published_at: journal.is_public
+        ? journal.published_at || new Date().toISOString()
+        : null,
+    };
 
-  if (journal.id) {
-    return supabase
-      .from("journals")
-      .update(payload)
-      .eq("id", journal.id)
-      .select()
-      .single();
+    if (journal.id) {
+      return await supabase
+        .from("journals")
+        .update(payload)
+        .eq("id", journal.id)
+        .select()
+        .single();
+    }
+
+    return await supabase.from("journals").insert(payload).select().single();
+  } catch (err) {
+    return { data: null, error: err };
   }
-
-  return supabase.from("journals").insert(payload).select().single();
 }
 
 export async function deleteJournal(id) {

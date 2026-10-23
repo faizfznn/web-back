@@ -80,18 +80,26 @@ function AdminJurnal() {
     setLoading(true);
     setMessage({ type: "", text: "" });
 
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
+    try {
+      const { error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
 
-    if (error) {
+      if (error) {
+        setMessage({
+          type: "error",
+          text: "Gagal masuk: " + (error.message || "Periksa email dan password."),
+        });
+      }
+    } catch (err) {
       setMessage({
         type: "error",
-        text: "Gagal masuk: " + (error.message || "Periksa email dan password."),
+        text: "Gagal masuk: " + (err.message || "Terjadi kesalahan jaringan."),
       });
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   }
 
   async function handleSave(event) {
@@ -99,31 +107,46 @@ function AdminJurnal() {
     setLoading(true);
     setMessage({ type: "", text: "" });
 
-    const { error } = await saveJournal(journal);
-    if (error) {
-      setMessage({ type: "error", text: error.message || "Gagal menyimpan jurnal." });
-    } else {
+    try {
+      const { error } = await saveJournal(journal);
+      if (error) {
+        setMessage({ type: "error", text: error.message || "Gagal menyimpan jurnal." });
+      } else {
+        setMessage({
+          type: "success",
+          text: journal.id ? "Catatan berhasil diperbarui." : "Catatan baru berhasil disimpan.",
+        });
+        setJournal(emptyJournal);
+        await loadJournals();
+      }
+    } catch (err) {
       setMessage({
-        type: "success",
-        text: journal.id ? "Catatan berhasil diperbarui." : "Catatan baru berhasil disimpan.",
+        type: "error",
+        text: err.message || "Terjadi kesalahan saat menyimpan catatan.",
       });
-      setJournal(emptyJournal);
-      await loadJournals();
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   }
 
   async function handleDelete(id, title) {
     if (!window.confirm(`Hapus catatan "${title}"?`)) return;
     setMessage({ type: "", text: "" });
 
-    const { error } = await deleteJournal(id);
-    if (error) {
-      setMessage({ type: "error", text: error.message || "Gagal menghapus catatan." });
-    } else {
-      setMessage({ type: "success", text: "Catatan berhasil dihapus." });
-      if (journal.id === id) setJournal(emptyJournal);
-      await loadJournals();
+    try {
+      const { error } = await deleteJournal(id);
+      if (error) {
+        setMessage({ type: "error", text: error.message || "Gagal menghapus catatan." });
+      } else {
+        setMessage({ type: "success", text: "Catatan berhasil dihapus." });
+        if (journal.id === id) setJournal(emptyJournal);
+        await loadJournals();
+      }
+    } catch (err) {
+      setMessage({
+        type: "error",
+        text: err.message || "Terjadi kesalahan saat menghapus catatan.",
+      });
     }
   }
 
@@ -691,7 +714,14 @@ function AdminJurnal() {
                           <button
                             type="button"
                             onClick={() => {
-                              setJournal(item);
+                              setJournal({
+                                id: item.id,
+                                title: item.title || "",
+                                content: item.content || "",
+                                image_url: item.image_url || "",
+                                is_public: Boolean(item.is_public),
+                                published_at: item.published_at || null,
+                              });
                               window.scrollTo({ top: 120, behavior: "smooth" });
                             }}
                             title="Edit catatan ini"
