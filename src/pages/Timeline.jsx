@@ -1,6 +1,6 @@
 import MomenBersama from "../components/MomenBersama";
 
-function Momen() {
+function Timeline() {
   return (
     <div className="w-full min-h-full flex flex-col items-center animate-fade-in-up">
       <MomenBersama />
@@ -8,4 +8,4 @@ function Momen() {
   );
 }
 
-export default Momen;
+export default Timeline;

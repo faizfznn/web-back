@@ -129,9 +129,9 @@ function Navbar() {
 
           {/* Momen */}
           <button
-            onClick={() => goTo("/momen")}
+            onClick={() => goTo("/timeline")}
             style={
-              currentPage === "/momen"
+              currentPage === "/timeline"
                 ? {
                   background:
                     "radial-gradient(44.33% 44.33% at 50.2% 0%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%), #6C40E5",
@@ -149,7 +149,7 @@ function Navbar() {
       tracking-[-0.432px]
       transition-all duration-300
 
-      ${currentPage === "/momen"
+      ${currentPage === "/timeline"
                 ? `
             px-3 md:px-[16px] py-1.5 md:py-[8px]
             gap-1 md:gap-[12.732px]
@@ -166,7 +166,7 @@ function Navbar() {
               }
     `}
           >
-            Momen
+            Timeline
           </button>
 
           {/* Memori */}
@@ -214,8 +214,8 @@ function Navbar() {
           <button
             onClick={() => goTo("/jurnal")}
             className={`flex items-center justify-center px-2 py-1 text-center font-['Satoshi'] text-[12px] font-medium tracking-[-0.432px] transition-all duration-300 md:px-[6px] md:py-[4px] md:text-[14.408px] ${currentPage === "/jurnal"
-                ? "rounded-[12px] bg-[#6C40E5] px-3 py-1.5 text-[#F5F5F5] shadow-[0_7px_16px_rgba(62,24,197,0.20)] md:px-[16px] md:py-[8px]"
-                : "text-[#505050] hover:text-[#303030]"
+              ? "rounded-[12px] bg-[#6C40E5] px-3 py-1.5 text-[#F5F5F5] shadow-[0_7px_16px_rgba(62,24,197,0.20)] md:px-[16px] md:py-[8px]"
+              : "text-[#505050] hover:text-[#303030]"
               }`}
           >
             Jurnal
@@ -224,8 +224,8 @@ function Navbar() {
           <button
             onClick={() => goTo("/agenda")}
             className={`flex items-center justify-center px-2 py-1 text-center font-['Satoshi'] text-[12px] font-medium tracking-[-0.432px] transition-all duration-300 md:px-[6px] md:py-[4px] md:text-[14.408px] ${currentPage === "/agenda"
-                ? "rounded-[12px] bg-[#6C40E5] px-3 py-1.5 text-[#F5F5F5] shadow-[0_7px_16px_rgba(62,24,197,0.20)] md:px-[16px] md:py-[8px]"
-                : "text-[#505050] hover:text-[#303030]"
+              ? "rounded-[12px] bg-[#6C40E5] px-3 py-1.5 text-[#F5F5F5] shadow-[0_7px_16px_rgba(62,24,197,0.20)] md:px-[16px] md:py-[8px]"
+              : "text-[#505050] hover:text-[#303030]"
               }`}
           >
             Agenda
@@ -290,10 +290,10 @@ function Navbar() {
             </button>
             <button
               type="button"
-              onClick={() => goTo("/momen")}
-              className={`block w-full rounded-xl px-4 py-3 text-left font-['Satoshi'] text-sm font-medium ${currentPage === "/momen" ? "bg-[#F1ECFF] text-[#6C40E5]" : "text-[#505050]"}`}
+              onClick={() => goTo("/timeline")}
+              className={`block w-full rounded-xl px-4 py-3 text-left font-['Satoshi'] text-sm font-medium ${currentPage === "/timeline" ? "bg-[#F1ECFF] text-[#6C40E5]" : "text-[#505050]"}`}
             >
-              Momen
+              Timeline
             </button>
             <button
               type="button"

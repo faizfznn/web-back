@@ -21,10 +21,10 @@ function Footer() {
           Poin Inti
         </Link>
         <Link
-          to="/momen"
+          to="/timeline"
           className="flex items-center justify-center border-r border-[#e4e4e4] px-3 py-4 text-center font-['Satoshi'] text-[11px] transition-colors hover:bg-[#f4f0ff] md:text-sm"
         >
-          Momen
+          Timeline
         </Link>
         <Link
           to="/memori"
