@@ -1,8 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import footerImage from "../assets/Footer-Image.png";
 import heartImage from "../assets/hati.png";
 
 function Footer() {
+  const location = useLocation();
+
+  const handleLinkClick = (path) => {
+    if (
+      location.pathname === path ||
+      (path === "/poin-inti" && location.pathname === "/")
+    ) {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="w-full text-white">
       <div className="mx-auto w-full max-w-[1344px] overflow-hidden">
@@ -16,30 +27,35 @@ function Footer() {
       <div className="grid min-h-[58px] grid-cols-3 border-t border-[#dedede] bg-white text-[#292929] md:grid-cols-5">
         <Link
           to="/poin-inti"
+          onClick={() => handleLinkClick("/poin-inti")}
           className="flex items-center justify-center border-r border-[#e4e4e4] px-3 py-4 text-center font-['Satoshi'] text-[11px] transition-colors hover:bg-[#f4f0ff] md:text-sm"
         >
           Poin Inti
         </Link>
         <Link
           to="/timeline"
+          onClick={() => handleLinkClick("/timeline")}
           className="flex items-center justify-center border-r border-[#e4e4e4] px-3 py-4 text-center font-['Satoshi'] text-[11px] transition-colors hover:bg-[#f4f0ff] md:text-sm"
         >
           Timeline
         </Link>
         <Link
           to="/memori"
+          onClick={() => handleLinkClick("/memori")}
           className="flex items-center justify-center border-r border-[#e4e4e4] px-3 py-4 text-center font-['Satoshi'] text-[11px] transition-colors hover:bg-[#f4f0ff] md:text-sm"
         >
           Memori
         </Link>
         <Link
           to="/jurnal"
+          onClick={() => handleLinkClick("/jurnal")}
           className="flex items-center justify-center border-r border-[#e4e4e4] px-3 py-4 text-center font-['Satoshi'] text-[11px] transition-colors hover:bg-[#f4f0ff] md:text-sm"
         >
           Jurnal
         </Link>
         <Link
           to="/agenda"
+          onClick={() => handleLinkClick("/agenda")}
           className="flex items-center justify-center border-r border-[#e4e4e4] px-3 py-4 text-center font-['Satoshi'] text-[11px] transition-colors hover:bg-[#f4f0ff] md:text-sm"
         >
           Agenda

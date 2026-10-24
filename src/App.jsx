@@ -7,6 +7,7 @@ import {
 import Navbar from "./components/Navbar";
 import MusicPlayer from "./components/MusicPlayer";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 import PoinInti from "./pages/PoinInti";
 import Timeline from "./pages/Timeline";
 import Memori from "./pages/Memori";
@@ -18,6 +19,7 @@ import Agenda from "./pages/Agenda";
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50/50 text-gray-800 font-sans selection:bg-purple-200 overflow-x-hidden">
         <Navbar />
         <MusicPlayer />

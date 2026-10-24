@@ -25,11 +25,19 @@ function Navbar() {
 
   const goTo = (path) => {
     setIsMenuOpen(false);
-    navigate(path);
+    if (currentPage === path || (path === "/poin-inti" && currentPage === "/")) {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    } else {
+      navigate(path);
+    }
   };
 
   const openMemori = () => {
     setIsMenuOpen(false);
+    if (currentPage === "/memori") {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+      return;
+    }
     if (isMobileOrTablet()) {
       setShowMemoriReminder(true);
       return;
