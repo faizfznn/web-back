@@ -15,6 +15,8 @@ import Jurnal from "./pages/Jurnal";
 import JurnalDetail from "./pages/JurnalDetail";
 import AdminJurnal from "./pages/AdminJurnal";
 import Agenda from "./pages/Agenda";
+import { Analytics } from '@vercel/analytics/react';
+
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
       <ScrollToTop />
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50/50 text-gray-800 font-sans selection:bg-purple-200 overflow-x-hidden">
         <Navbar />
+        <Analytics />
         <MusicPlayer />
 
         <main className="pt-32 pb-20 px-0 max-w-none flex flex-col items-center min-h-screen">
