@@ -1,4 +1,4 @@
-# 🌸 Rara Web
+<!-- # 🌸 Rara Web
 
 Website personal & interaktif yang dibuat dengan **React**, **Vite**, **Tailwind CSS**, dan **Supabase**.
 
@@ -89,4 +89,4 @@ Jika Anda belum pernah ngoding, ikuti langkah mudah berikut:
 ## 🌐 Deployment
 
 Project ini sudah dikonfigurasi dan siap di-deploy ke platform seperti [Vercel](https://vercel.com/) atau [Netlify](https://www.netlify.com/).
-Pastikan untuk menambahkan Environment Variables (`VITE_SUPABASE_URL` dan `VITE_SUPABASE_ANON_KEY`) pada pengaturan platform hosting Anda.
+Pastikan untuk menambahkan Environment Variables (`VITE_SUPABASE_URL` dan `VITE_SUPABASE_ANON_KEY`) pada pengaturan platform hosting Anda. -->
