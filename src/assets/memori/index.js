@@ -96,6 +96,10 @@ import FOTO_53 from "./foto-53.jpeg";
 import FOTO_54 from "./foto-54.jpeg";
 import FOTO_55 from "./foto-55.jpeg";
 import FOTO_56 from "./foto-56.jpeg";
+import FOTO_57 from "./foto-57.jpeg";
+import FOTO_58 from "./foto-58.jpeg";
+import FOTO_59 from "./foto-59.jpeg";
+import FOTO_60 from "./foto-60.jpeg";
 import FOTO_CANTIK_1 from "./foto-cantik-1.jpg";
 import FOTO_CANTIK_2 from "./foto-cantik-2.jpg";
 import FOTO_CANTIK_3 from "./foto-cantik-3.jpg";
@@ -116,6 +120,7 @@ import FOTO_CANTIK_17 from "./foto-cantik-17.jpeg";
 import FOTO_CANTIK_18 from "./foto-cantik-18.jpeg";
 import FOTO_CANTIK_19 from "./foto-cantik-19.jpeg";
 import FOTO_CANTIK_20 from "./foto-cantik-20.jpeg";
+import FOTO_CANTIK_21 from "./foto-cantik-21.jpeg";
 import FOTO_LOMBA_1 from "./foto-lomba-1.jpg";
 
 const MEMORI_MEDIA = [
@@ -653,6 +658,30 @@ const MEMORI_MEDIA = [
     //   "terimakasih yaa sayang kamu sudah ceria pas keluar sama aku, dirawat bunganya dengan baik, sampai mati",
   },
   {
+    src: FOTO_57,
+    title: "YEAYYY KONSER BARENG FIRA SAYANGKU",
+    // caption:
+    //   "terimakasih yaa sayang kamu sudah ceria pas keluar sama aku, dirawat bunganya dengan baik, sampai mati",
+  },
+  {
+    src: FOTO_58,
+    title: "YAHAHAHAH CAPEK YAH BERDIRI TERUS",
+    // caption:
+    //   "terimakasih yaa sayang kamu sudah ceria pas keluar sama aku, dirawat bunganya dengan baik, sampai mati",
+  },
+  {
+    src: FOTO_59,
+    title: "SUDAH KELAR KONSER BARENG KONSER DATE",
+    // caption:
+    //   "terimakasih yaa sayang kamu sudah ceria pas keluar sama aku, dirawat bunganya dengan baik, sampai mati",
+  },
+  {
+    src: FOTO_60,
+    title: "MUKANYA CANTIK BGT HAHAHA",
+    // caption:
+    //   "terimakasih yaa sayang kamu sudah ceria pas keluar sama aku, dirawat bunganya dengan baik, sampai mati",
+  },
+  {
     src: VIDEO_46,
     mediaType: "video",
     title: "Faiz mam, Fira Tidur",
@@ -778,6 +807,11 @@ const MEMORI_MEDIA = [
     src: FOTO_CANTIK_20,
     title: "Masyaallah Sayang Cakep BGT #20",
     caption: "entah aku harus memuja pantainya atau orang inii",
+  },
+  {
+    src: FOTO_CANTIK_21,
+    title: "Masyaallah Sayang Cakep BGT #21",
+    caption: "entah aku harus memuja tulus atau orang ini",
   },
 ];
 
